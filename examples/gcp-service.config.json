@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "id": "demo-service-a-demo",
+      "number": "123456789012",
+      "regions": [
+        "europe-west2",
+        "europe-west1"
+      ]
+    },
+    {
+      "id": "demo-service-b-demo",
+      "number": "123456789013",
+      "regions": [
+        "europe-west2",
+        "europe-west1"
+      ]
+    }
+  ],
+  "serviceLabelKey": "service_id",
+  "serviceLabelValues": {
+    "demo-service-a": "DEMO-SERVICE-A",
+    "demo-service-b": "DEMO-SERVICE-B"
+  },
+  "services": [
+    {
+      "id": "DEMO-SERVICE-A",
+      "name": "Example service A"
+    },
+    {
+      "id": "DEMO-SERVICE-B",
+      "name": "Balance enquiry"
+    },
+    {
+      "id": "DEMO-SERVICE-C",
+      "name": "Transfers — no visible resources in example"
+    }
+  ],
+  "maxDependencyDepth": 3,
+  "maxDependenciesPerService": 1000
+}

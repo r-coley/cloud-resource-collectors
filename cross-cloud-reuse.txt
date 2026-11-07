@@ -1,0 +1,65 @@
+Cross-cloud discovery reuse shortlist — reviewed 7 November 2026
+
+Preliminary review of official repositories/docs, not an integration or performance
+benchmark. No third-party project has been installed, embedded or deployed.
+
+Fix Inventory (formerly Resoto)
+https://github.com/someengineering/fixinventory
+AWS/Azure/GCP collectors; common resource kinds; dependency/access graph; inventory
+snapshots and export facilities. Closest conceptual fit to a cloud-neutral discovery
+model feeding an independent resilience engine. Root repo identifies Apache-2.0.
+Validate Azure resilience field coverage, resource relationship semantics, supported
+versions, lifecycle handling and deployment requirements before choosing it.
+Azure collector: plugins/azure/fix_plugin_azure/resource in the repository.
+
+Cartography
+https://github.com/cartography-cncf/cartography
+Python collectors for AWS/Azure/GCP and other platforms, with resources and
+relationships in Neo4j. Root repo identifies Apache-2.0. Strong candidate for shared
+dependencies, reachability and graph-backed analysis. Its security focus does not
+establish the required resilience field coverage; inspect Azure schema and collectors.
+
+Steampipe
+https://github.com/turbot/steampipe
+https://github.com/turbot/steampipe-plugin-azure
+SQL access to cloud APIs; AWS/Azure/GCP plugins and standalone export options.
+Useful for targeted enrichment and validating missing configuration fields. An
+estate snapshot/history and relationship model still need an explicit design.
+Current core repository identifies AGPL-3.0 and describes commercial distribution
+terms; the Azure plugin identifies Apache-2.0. Review exact component/version terms.
+
+CloudQuery
+https://github.com/cloudquery/cloudquery
+https://www.cloudquery.io/docs/platform/core-concepts/data-model
+Cross-cloud inventory/data pipelines into queryable storage. Useful where a
+persistent inventory warehouse is preferred. Relational inventory still needs
+service grouping and resilience interpretation. The repository says the framework,
+SDK, CLI and some integrations are open source, while some integrations have moved
+to closed source. Review the chosen connector's terms and costs separately.
+
+Recommendation for the next evaluation
+Compare Fix Inventory and Cartography first against the same synthetic Azure
+service resource set. Keep our service snapshot, evidence and assessment interfaces
+independent of the collection implementation. Do not expand custom cloud API code
+until we know what these projects can supply.
+
+Evaluate exact output evidence for:
+- serviceId ownership and untagged/shared dependencies;
+- resource placement versus actual instance distribution;
+- VMSS repair settings, scaling bounds, Spot priority and reservations;
+- SQL standby/failover policy, replication and backup configuration;
+- explicit network and routing references;
+- timestamps, permission gaps, partial collection and stale/deleted resources;
+- export without inventing capacity or simulation readiness;
+- maintenance, deployment footprint, licensing and scale at the service estate.
+
+Discovery exports feed our common architecture model. Pattern requirements,
+architect-confirmed workload capacity and failure simulation remain our own layer.
+
+Detailed follow-up evaluation (7 November 2026)
+See docs/azure-discovery-evaluation.txt. Pinned-source inspection found Fix
+closer on Azure resilience fields, but its checked-out default branch's latest
+commit is March 2025. Cartography's is November 2026, but Azure VMSS collection
+and several required persisted resilience settings are missing. Prefer a Fix
+proof of concept subject to maintenance validation; neither is yet production
+selected or live-tested.

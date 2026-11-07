@@ -1,0 +1,30 @@
+{
+  "accounts": [
+    {
+      "id": "111122223333",
+      "partition": "aws",
+      "profile": "service-readonly",
+      "regions": [
+        "eu-west-2",
+        "eu-west-1"
+      ]
+    }
+  ],
+  "serviceTagKey": "serviceId",
+  "services": [
+    {
+      "id": "DEMO-SERVICE-A",
+      "name": "Example service A"
+    },
+    {
+      "id": "DEMO-SERVICE-B",
+      "name": "Balance enquiry"
+    },
+    {
+      "id": "DEMO-SERVICE-C",
+      "name": "Transfers — no visible resources in example"
+    }
+  ],
+  "maxDependencyDepth": 3,
+  "maxDependenciesPerService": 1000
+}

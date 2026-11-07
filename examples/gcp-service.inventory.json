@@ -1,0 +1,1831 @@
+{
+  "inventoryVersion": "gcp-api-inventory/0.1",
+  "provider": "gcp",
+  "projects": [
+    {
+      "id": "demo-service-a-demo",
+      "number": "123456789012",
+      "regions": [
+        "europe-west2",
+        "europe-west1"
+      ]
+    },
+    {
+      "id": "demo-service-b-demo",
+      "number": "123456789013",
+      "regions": [
+        "europe-west2",
+        "europe-west1"
+      ]
+    }
+  ],
+  "startedAt": "2026-11-07T12:00:00.000Z",
+  "finishedAt": "2026-11-07T12:00:00.000Z",
+  "collections": [
+    {
+      "id": "collection-0",
+      "projectId": "demo-service-a-demo",
+      "source": "cloudresourcemanager:projects.get",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "recordCount": 1,
+      "errorCode": null,
+      "pages": 1
+    },
+    {
+      "id": "collection-1",
+      "projectId": "demo-service-b-demo",
+      "source": "cloudresourcemanager:projects.get",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "recordCount": 1,
+      "errorCode": null,
+      "pages": 1
+    },
+    {
+      "id": "collection-2",
+      "projectId": "demo-service-a-demo",
+      "source": "assets",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-3",
+      "projectId": "demo-service-a-demo",
+      "source": "instances",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 8,
+      "errorCode": null
+    },
+    {
+      "id": "collection-4",
+      "projectId": "demo-service-a-demo",
+      "source": "instanceGroupManagers",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-5",
+      "projectId": "demo-service-a-demo",
+      "source": "instanceGroups",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-6",
+      "projectId": "demo-service-a-demo",
+      "source": "autoscalers",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-7",
+      "projectId": "demo-service-a-demo",
+      "source": "backendServices",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-8",
+      "projectId": "demo-service-a-demo",
+      "source": "forwardingRules",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-9",
+      "projectId": "demo-service-a-demo",
+      "source": "subnetworks",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-10",
+      "projectId": "demo-service-a-demo",
+      "source": "reservations",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-11",
+      "projectId": "demo-service-a-demo",
+      "source": "networks",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-12",
+      "projectId": "demo-service-a-demo",
+      "source": "instanceTemplates",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-13",
+      "projectId": "demo-service-a-demo",
+      "source": "globalForwardingRules",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-14",
+      "projectId": "demo-service-a-demo",
+      "source": "healthChecks",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-15",
+      "projectId": "demo-service-a-demo",
+      "source": "urlMaps",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-16",
+      "projectId": "demo-service-a-demo",
+      "source": "targetHttpProxies",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-17",
+      "projectId": "demo-service-a-demo",
+      "source": "targetHttpsProxies",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-18",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-healthChecks:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-19",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-healthChecks:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-20",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-urlMaps:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-21",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-urlMaps:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-22",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-targetHttpProxies:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-23",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-targetHttpProxies:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-24",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-targetHttpsProxies:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-25",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-targetHttpsProxies:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-26",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-instanceTemplates:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-27",
+      "projectId": "demo-service-a-demo",
+      "source": "regional-instanceTemplates:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-28",
+      "projectId": "demo-service-a-demo",
+      "source": "sql-instances",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-29",
+      "projectId": "demo-service-a-demo",
+      "source": "managed-instances",
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 6,
+      "errorCode": null
+    },
+    {
+      "id": "collection-30",
+      "projectId": "demo-service-a-demo",
+      "source": "managed-instances",
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west1/instanceGroupManagers/payments-recovery",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-31",
+      "projectId": "demo-service-b-demo",
+      "source": "assets",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-32",
+      "projectId": "demo-service-b-demo",
+      "source": "instances",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-33",
+      "projectId": "demo-service-b-demo",
+      "source": "instanceGroupManagers",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-34",
+      "projectId": "demo-service-b-demo",
+      "source": "instanceGroups",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-35",
+      "projectId": "demo-service-b-demo",
+      "source": "autoscalers",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-36",
+      "projectId": "demo-service-b-demo",
+      "source": "backendServices",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-37",
+      "projectId": "demo-service-b-demo",
+      "source": "forwardingRules",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-38",
+      "projectId": "demo-service-b-demo",
+      "source": "subnetworks",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-39",
+      "projectId": "demo-service-b-demo",
+      "source": "reservations",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-40",
+      "projectId": "demo-service-b-demo",
+      "source": "networks",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-41",
+      "projectId": "demo-service-b-demo",
+      "source": "instanceTemplates",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-42",
+      "projectId": "demo-service-b-demo",
+      "source": "globalForwardingRules",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-43",
+      "projectId": "demo-service-b-demo",
+      "source": "healthChecks",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-44",
+      "projectId": "demo-service-b-demo",
+      "source": "urlMaps",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-45",
+      "projectId": "demo-service-b-demo",
+      "source": "targetHttpProxies",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-46",
+      "projectId": "demo-service-b-demo",
+      "source": "targetHttpsProxies",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-47",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-healthChecks:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-48",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-healthChecks:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-49",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-urlMaps:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-50",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-urlMaps:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-51",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-targetHttpProxies:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-52",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-targetHttpProxies:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-53",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-targetHttpsProxies:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-54",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-targetHttpsProxies:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-55",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-instanceTemplates:europe-west2",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-56",
+      "projectId": "demo-service-b-demo",
+      "source": "regional-instanceTemplates:europe-west1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-57",
+      "projectId": "demo-service-b-demo",
+      "source": "sql-instances",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    }
+  ],
+  "records": [
+    {
+      "collectionId": "collection-0",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//cloudresourcemanager.googleapis.com/projects/123456789012",
+      "nativeType": "cloudresourcemanager.googleapis.com/Project",
+      "kind": "project",
+      "configuration": {
+        "projectId": "demo-service-a-demo",
+        "projectNumber": "123456789012",
+        "lifecycleState": "ACTIVE",
+        "name": "demo-service-a-demo"
+      },
+      "parentId": null
+    },
+    {
+      "collectionId": "collection-1",
+      "projectId": "demo-service-b-demo",
+      "projectNumber": "123456789013",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//cloudresourcemanager.googleapis.com/projects/123456789013",
+      "nativeType": "cloudresourcemanager.googleapis.com/Project",
+      "kind": "project",
+      "configuration": {
+        "projectId": "demo-service-b-demo",
+        "projectNumber": "123456789013",
+        "lifecycleState": "ACTIVE",
+        "name": "demo-service-b-demo"
+      },
+      "parentId": null
+    },
+    {
+      "collectionId": "collection-2",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/123456789012/zones/europe-west2-a/instances/payments-primary-0",
+      "nativeType": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "configuration": {
+        "name": "//compute.googleapis.com/projects/123456789012/zones/europe-west2-a/instances/payments-primary-0",
+        "assetType": "compute.googleapis.com/Instance",
+        "resource": {
+          "location": "europe-west2-a",
+          "data": {
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-0",
+            "name": "payments-primary-0",
+            "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a",
+            "machineType": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/machineTypes/n2-standard-4",
+            "status": "RUNNING",
+            "labels": {
+              "service_id": "demo-service-a"
+            },
+            "scheduling": {
+              "provisioningModel": "STANDARD",
+              "automaticRestart": true,
+              "onHostMaintenance": "MIGRATE"
+            },
+            "networkInterfaces": [
+              {
+                "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+                "subnetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service"
+              }
+            ]
+          }
+        }
+      },
+      "parentId": null,
+      "asset": true
+    },
+    {
+      "collectionId": "collection-3",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-0",
+      "nativeType": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-0",
+        "name": "payments-primary-0",
+        "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a",
+        "machineType": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/machineTypes/n2-standard-4",
+        "status": "RUNNING",
+        "labels": {
+          "service_id": "demo-service-a"
+        },
+        "scheduling": {
+          "provisioningModel": "STANDARD",
+          "automaticRestart": true,
+          "onHostMaintenance": "MIGRATE"
+        },
+        "networkInterfaces": [
+          {
+            "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+            "subnetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service"
+          }
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-3",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-2",
+      "nativeType": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-2",
+        "name": "payments-primary-2",
+        "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a",
+        "machineType": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/machineTypes/n2-standard-4",
+        "status": "RUNNING",
+        "labels": {
+          "service_id": "demo-service-a"
+        },
+        "scheduling": {
+          "provisioningModel": "STANDARD",
+          "automaticRestart": true,
+          "onHostMaintenance": "MIGRATE"
+        },
+        "networkInterfaces": [
+          {
+            "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+            "subnetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service"
+          }
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-3",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-4",
+      "nativeType": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-4",
+        "name": "payments-primary-4",
+        "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a",
+        "machineType": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/machineTypes/n2-standard-4",
+        "status": "RUNNING",
+        "labels": {
+          "service_id": "demo-service-a"
+        },
+        "scheduling": {
+          "provisioningModel": "STANDARD",
+          "automaticRestart": true,
+          "onHostMaintenance": "MIGRATE"
+        },
+        "networkInterfaces": [
+          {
+            "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+            "subnetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service"
+          }
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-3",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/zones/europe-west2-b/instances/payments-primary-1",
+      "nativeType": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b/instances/payments-primary-1",
+        "name": "payments-primary-1",
+        "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b",
+        "machineType": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b/machineTypes/n2-standard-4",
+        "status": "RUNNING",
+        "labels": {
+          "service_id": "demo-service-a"
+        },
+        "scheduling": {
+          "provisioningModel": "STANDARD",
+          "automaticRestart": true,
+          "onHostMaintenance": "MIGRATE"
+        },
+        "networkInterfaces": [
+          {
+            "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+            "subnetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service"
+          }
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-3",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/zones/europe-west2-b/instances/payments-primary-3",
+      "nativeType": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b/instances/payments-primary-3",
+        "name": "payments-primary-3",
+        "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b",
+        "machineType": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b/machineTypes/n2-standard-4",
+        "status": "RUNNING",
+        "labels": {
+          "service_id": "demo-service-a"
+        },
+        "scheduling": {
+          "provisioningModel": "STANDARD",
+          "automaticRestart": true,
+          "onHostMaintenance": "MIGRATE"
+        },
+        "networkInterfaces": [
+          {
+            "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+            "subnetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service"
+          }
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-3",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/zones/europe-west2-b/instances/payments-primary-5",
+      "nativeType": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b/instances/payments-primary-5",
+        "name": "payments-primary-5",
+        "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b",
+        "machineType": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b/machineTypes/n2-standard-4",
+        "status": "RUNNING",
+        "labels": {
+          "service_id": "demo-service-a"
+        },
+        "scheduling": {
+          "provisioningModel": "STANDARD",
+          "automaticRestart": true,
+          "onHostMaintenance": "MIGRATE"
+        },
+        "networkInterfaces": [
+          {
+            "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+            "subnetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service"
+          }
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-3",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/zones/europe-west1-a/instances/payments-recovery-0",
+      "nativeType": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-a/instances/payments-recovery-0",
+        "name": "payments-recovery-0",
+        "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-a",
+        "machineType": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-a/machineTypes/n2-standard-4",
+        "status": "RUNNING",
+        "labels": {
+          "service_id": "demo-service-a"
+        },
+        "scheduling": {
+          "provisioningModel": "STANDARD",
+          "automaticRestart": true,
+          "onHostMaintenance": "MIGRATE"
+        },
+        "networkInterfaces": [
+          {
+            "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+            "subnetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/subnetworks/service"
+          }
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-3",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/zones/europe-west1-b/instances/payments-recovery-1",
+      "nativeType": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-b/instances/payments-recovery-1",
+        "name": "payments-recovery-1",
+        "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-b",
+        "machineType": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-b/machineTypes/n2-standard-4",
+        "status": "RUNNING",
+        "labels": {
+          "service_id": "demo-service-a"
+        },
+        "scheduling": {
+          "provisioningModel": "STANDARD",
+          "automaticRestart": true,
+          "onHostMaintenance": "MIGRATE"
+        },
+        "networkInterfaces": [
+          {
+            "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+            "subnetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/subnetworks/service"
+          }
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-4",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+      "nativeType": "compute.googleapis.com/InstanceGroupManager",
+      "kind": "compute-group",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+        "name": "payments-primary",
+        "region": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2",
+        "targetSize": 6,
+        "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-primary",
+        "instanceGroup": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/instanceGroups/payments-primary",
+        "distributionPolicy": {
+          "zones": [
+            {
+              "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a"
+            },
+            {
+              "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b"
+            }
+          ]
+        },
+        "autoHealingPolicies": [
+          {
+            "healthCheck": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/healthChecks/checkout",
+            "initialDelaySec": 120
+          }
+        ],
+        "updatePolicy": {
+          "type": "PROACTIVE",
+          "minimalAction": "REPLACE"
+        },
+        "status": {
+          "isStable": true
+        }
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-4",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west1/instanceGroupManagers/payments-recovery",
+      "nativeType": "compute.googleapis.com/InstanceGroupManager",
+      "kind": "compute-group",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/instanceGroupManagers/payments-recovery",
+        "name": "payments-recovery",
+        "region": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1",
+        "targetSize": 2,
+        "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-recovery",
+        "instanceGroup": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/instanceGroups/payments-recovery",
+        "distributionPolicy": {
+          "zones": [
+            {
+              "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-a"
+            },
+            {
+              "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-b"
+            }
+          ]
+        },
+        "autoHealingPolicies": [
+          {
+            "healthCheck": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/healthChecks/checkout",
+            "initialDelaySec": 120
+          }
+        ],
+        "updatePolicy": {
+          "type": "PROACTIVE",
+          "minimalAction": "REPLACE"
+        },
+        "status": {
+          "isStable": true
+        }
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-5",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroups/payments-primary",
+      "nativeType": "compute.googleapis.com/InstanceGroup",
+      "kind": "compute-group-membership",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/instanceGroups/payments-primary",
+        "name": "payments-primary",
+        "region": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2",
+        "size": 6,
+        "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service"
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-5",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west1/instanceGroups/payments-recovery",
+      "nativeType": "compute.googleapis.com/InstanceGroup",
+      "kind": "compute-group-membership",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/instanceGroups/payments-recovery",
+        "name": "payments-recovery",
+        "region": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1",
+        "size": 2,
+        "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service"
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-6",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/autoscalers/payments-primary",
+      "nativeType": "compute.googleapis.com/Autoscaler",
+      "kind": "scaling-policy",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/autoscalers/payments-primary",
+        "name": "payments-primary",
+        "target": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+        "region": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2",
+        "autoscalingPolicy": {
+          "minNumReplicas": 6,
+          "maxNumReplicas": 12,
+          "coolDownPeriodSec": 60,
+          "cpuUtilization": {
+            "utilizationTarget": 0.6
+          }
+        },
+        "status": "ACTIVE"
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-6",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west1/autoscalers/payments-recovery",
+      "nativeType": "compute.googleapis.com/Autoscaler",
+      "kind": "scaling-policy",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/autoscalers/payments-recovery",
+        "name": "payments-recovery",
+        "target": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/instanceGroupManagers/payments-recovery",
+        "region": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1",
+        "autoscalingPolicy": {
+          "minNumReplicas": 2,
+          "maxNumReplicas": 12,
+          "coolDownPeriodSec": 60,
+          "cpuUtilization": {
+            "utilizationTarget": 0.6
+          }
+        },
+        "status": "ACTIVE"
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-7",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/global/backendServices/checkout",
+      "nativeType": "compute.googleapis.com/BackendService",
+      "kind": "routing-pool",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/backendServices/checkout",
+        "name": "checkout",
+        "protocol": "HTTP",
+        "loadBalancingScheme": "EXTERNAL_MANAGED",
+        "backends": [
+          {
+            "group": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/instanceGroups/payments-primary",
+            "balancingMode": "UTILIZATION",
+            "maxUtilization": 0.8
+          },
+          {
+            "group": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/instanceGroups/payments-recovery",
+            "balancingMode": "UTILIZATION",
+            "maxUtilization": 0.8
+          }
+        ],
+        "healthChecks": [
+          "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/healthChecks/checkout"
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-9",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service",
+      "nativeType": "compute.googleapis.com/Subnetwork",
+      "kind": "network",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service",
+        "name": "service",
+        "region": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2",
+        "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+        "ipCidrRange": "10.0.0.0/16",
+        "privateIpGoogleAccess": true
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-9",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west1/subnetworks/service",
+      "nativeType": "compute.googleapis.com/Subnetwork",
+      "kind": "network",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/subnetworks/service",
+        "name": "service",
+        "region": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1",
+        "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+        "ipCidrRange": "10.1.0.0/16",
+        "privateIpGoogleAccess": true
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-10",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/zones/europe-west2-a/reservations/service",
+      "nativeType": "compute.googleapis.com/Reservation",
+      "kind": "allocation-reservation",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/reservations/service",
+        "name": "service",
+        "zone": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a",
+        "status": "READY",
+        "specificReservation": {
+          "count": "3",
+          "inUseCount": "2",
+          "instanceProperties": {
+            "machineType": "n2-standard-4"
+          }
+        },
+        "labels": {
+          "service_id": "demo-service-a"
+        }
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-11",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/global/networks/service",
+      "nativeType": "compute.googleapis.com/Network",
+      "kind": "network",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service",
+        "name": "service",
+        "autoCreateSubnetworks": false,
+        "subnetworks": [
+          "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west2/subnetworks/service",
+          "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/regions/europe-west1/subnetworks/service"
+        ]
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-12",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/global/instanceTemplates/payments-primary",
+      "nativeType": "compute.googleapis.com/InstanceTemplate",
+      "kind": "compute-template",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-primary",
+        "name": "payments-primary",
+        "properties": {
+          "machineType": "n2-standard-4",
+          "scheduling": {
+            "provisioningModel": "STANDARD",
+            "automaticRestart": true
+          },
+          "labels": {
+            "service_id": "demo-service-a"
+          },
+          "networkInterfaces": [
+            {
+              "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service"
+            }
+          ]
+        }
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-12",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/global/instanceTemplates/payments-recovery",
+      "nativeType": "compute.googleapis.com/InstanceTemplate",
+      "kind": "compute-template",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-recovery",
+        "name": "payments-recovery",
+        "properties": {
+          "machineType": "n2-standard-4",
+          "scheduling": {
+            "provisioningModel": "STANDARD",
+            "automaticRestart": true
+          },
+          "labels": {
+            "service_id": "demo-service-a"
+          },
+          "networkInterfaces": [
+            {
+              "network": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service"
+            }
+          ]
+        }
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-13",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/global/forwardingRules/checkout",
+      "nativeType": "compute.googleapis.com/ForwardingRule",
+      "kind": "routing",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/forwardingRules/checkout",
+        "name": "checkout",
+        "target": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/targetHttpsProxies/checkout",
+        "loadBalancingScheme": "EXTERNAL_MANAGED",
+        "IPProtocol": "TCP",
+        "portRange": "443-443"
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-14",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/global/healthChecks/checkout",
+      "nativeType": "compute.googleapis.com/HealthCheck",
+      "kind": "health-check",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/healthChecks/checkout",
+        "name": "checkout",
+        "type": "HTTP",
+        "checkIntervalSec": 10,
+        "timeoutSec": 5,
+        "healthyThreshold": 2,
+        "unhealthyThreshold": 3,
+        "httpHealthCheck": {
+          "port": 8080,
+          "requestPath": "/ready"
+        }
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-15",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/global/urlMaps/checkout",
+      "nativeType": "compute.googleapis.com/UrlMap",
+      "kind": "routing-rule",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/urlMaps/checkout",
+        "name": "checkout",
+        "defaultService": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/backendServices/checkout"
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-17",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/global/targetHttpsProxies/checkout",
+      "nativeType": "compute.googleapis.com/TargetHttpsProxy",
+      "kind": "routing-rule",
+      "configuration": {
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/targetHttpsProxies/checkout",
+        "name": "checkout",
+        "urlMap": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/urlMaps/checkout"
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-28",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//cloudsql.googleapis.com/projects/demo-service-a-demo/instances/payments-primary",
+      "nativeType": "sqladmin.googleapis.com/Instance",
+      "kind": "database",
+      "configuration": {
+        "name": "payments-primary",
+        "region": "europe-west2",
+        "gceZone": "europe-west2-a",
+        "secondaryGceZone": "europe-west2-b",
+        "state": "RUNNABLE",
+        "instanceType": "CLOUD_SQL_INSTANCE",
+        "databaseVersion": "POSTGRES_16",
+        "replicaNames": [
+          "payments-recovery"
+        ],
+        "settings": {
+          "tier": "db-custom-4-15360",
+          "availabilityType": "REGIONAL",
+          "userLabels": {
+            "service_id": "demo-service-a"
+          },
+          "backupConfiguration": {
+            "enabled": true,
+            "pointInTimeRecoveryEnabled": true,
+            "transactionLogRetentionDays": 7,
+            "backupRetentionSettings": {
+              "retainedBackups": 14,
+              "retentionUnit": "COUNT"
+            }
+          },
+          "ipConfiguration": {
+            "privateNetwork": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/networks/service"
+          }
+        }
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-28",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//cloudsql.googleapis.com/projects/demo-service-a-demo/instances/payments-recovery",
+      "nativeType": "sqladmin.googleapis.com/Instance",
+      "kind": "database",
+      "configuration": {
+        "name": "payments-recovery",
+        "region": "europe-west1",
+        "gceZone": "europe-west1-a",
+        "state": "RUNNABLE",
+        "instanceType": "READ_REPLICA_INSTANCE",
+        "databaseVersion": "POSTGRES_16",
+        "masterInstanceName": "payments-primary",
+        "settings": {
+          "tier": "db-custom-4-15360",
+          "availabilityType": "ZONAL",
+          "userLabels": {
+            "service_id": "demo-service-a"
+          },
+          "backupConfiguration": {
+            "enabled": true
+          }
+        }
+      },
+      "parentId": null,
+      "asset": false
+    },
+    {
+      "collectionId": "collection-29",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary/members/%2F%2Fcompute.googleapis.com%2Fprojects%2Fdemo-service-a-demo%2Fzones%2Feurope-west2-a%2Finstances%2Fpayments-primary-0",
+      "nativeType": "collector.gcp/ManagedInstanceObservation",
+      "kind": "health-observation",
+      "configuration": {
+        "instance": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-0",
+        "instanceStatus": "RUNNING",
+        "currentAction": "NONE",
+        "instanceHealth": [
+          {
+            "detailedHealthState": "HEALTHY"
+          }
+        ],
+        "version": {
+          "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-primary"
+        }
+      },
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+      "asset": false
+    },
+    {
+      "collectionId": "collection-29",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary/members/%2F%2Fcompute.googleapis.com%2Fprojects%2Fdemo-service-a-demo%2Fzones%2Feurope-west2-b%2Finstances%2Fpayments-primary-1",
+      "nativeType": "collector.gcp/ManagedInstanceObservation",
+      "kind": "health-observation",
+      "configuration": {
+        "instance": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b/instances/payments-primary-1",
+        "instanceStatus": "RUNNING",
+        "currentAction": "NONE",
+        "instanceHealth": [
+          {
+            "detailedHealthState": "HEALTHY"
+          }
+        ],
+        "version": {
+          "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-primary"
+        }
+      },
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+      "asset": false
+    },
+    {
+      "collectionId": "collection-29",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary/members/%2F%2Fcompute.googleapis.com%2Fprojects%2Fdemo-service-a-demo%2Fzones%2Feurope-west2-a%2Finstances%2Fpayments-primary-2",
+      "nativeType": "collector.gcp/ManagedInstanceObservation",
+      "kind": "health-observation",
+      "configuration": {
+        "instance": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-2",
+        "instanceStatus": "RUNNING",
+        "currentAction": "NONE",
+        "instanceHealth": [
+          {
+            "detailedHealthState": "HEALTHY"
+          }
+        ],
+        "version": {
+          "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-primary"
+        }
+      },
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+      "asset": false
+    },
+    {
+      "collectionId": "collection-29",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary/members/%2F%2Fcompute.googleapis.com%2Fprojects%2Fdemo-service-a-demo%2Fzones%2Feurope-west2-b%2Finstances%2Fpayments-primary-3",
+      "nativeType": "collector.gcp/ManagedInstanceObservation",
+      "kind": "health-observation",
+      "configuration": {
+        "instance": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b/instances/payments-primary-3",
+        "instanceStatus": "RUNNING",
+        "currentAction": "NONE",
+        "instanceHealth": [
+          {
+            "detailedHealthState": "HEALTHY"
+          }
+        ],
+        "version": {
+          "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-primary"
+        }
+      },
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+      "asset": false
+    },
+    {
+      "collectionId": "collection-29",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary/members/%2F%2Fcompute.googleapis.com%2Fprojects%2Fdemo-service-a-demo%2Fzones%2Feurope-west2-a%2Finstances%2Fpayments-primary-4",
+      "nativeType": "collector.gcp/ManagedInstanceObservation",
+      "kind": "health-observation",
+      "configuration": {
+        "instance": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-a/instances/payments-primary-4",
+        "instanceStatus": "RUNNING",
+        "currentAction": "NONE",
+        "instanceHealth": [
+          {
+            "detailedHealthState": "HEALTHY"
+          }
+        ],
+        "version": {
+          "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-primary"
+        }
+      },
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+      "asset": false
+    },
+    {
+      "collectionId": "collection-29",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary/members/%2F%2Fcompute.googleapis.com%2Fprojects%2Fdemo-service-a-demo%2Fzones%2Feurope-west2-b%2Finstances%2Fpayments-primary-5",
+      "nativeType": "collector.gcp/ManagedInstanceObservation",
+      "kind": "health-observation",
+      "configuration": {
+        "instance": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west2-b/instances/payments-primary-5",
+        "instanceStatus": "RUNNING",
+        "currentAction": "NONE",
+        "instanceHealth": [
+          {
+            "detailedHealthState": "HEALTHY"
+          }
+        ],
+        "version": {
+          "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-primary"
+        }
+      },
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west2/instanceGroupManagers/payments-primary",
+      "asset": false
+    },
+    {
+      "collectionId": "collection-30",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west1/instanceGroupManagers/payments-recovery/members/%2F%2Fcompute.googleapis.com%2Fprojects%2Fdemo-service-a-demo%2Fzones%2Feurope-west1-a%2Finstances%2Fpayments-recovery-0",
+      "nativeType": "collector.gcp/ManagedInstanceObservation",
+      "kind": "health-observation",
+      "configuration": {
+        "instance": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-a/instances/payments-recovery-0",
+        "instanceStatus": "RUNNING",
+        "currentAction": "NONE",
+        "instanceHealth": [
+          {
+            "detailedHealthState": "HEALTHY"
+          }
+        ],
+        "version": {
+          "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-recovery"
+        }
+      },
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west1/instanceGroupManagers/payments-recovery",
+      "asset": false
+    },
+    {
+      "collectionId": "collection-30",
+      "projectId": "demo-service-a-demo",
+      "projectNumber": "123456789012",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west1/instanceGroupManagers/payments-recovery/members/%2F%2Fcompute.googleapis.com%2Fprojects%2Fdemo-service-a-demo%2Fzones%2Feurope-west1-b%2Finstances%2Fpayments-recovery-1",
+      "nativeType": "collector.gcp/ManagedInstanceObservation",
+      "kind": "health-observation",
+      "configuration": {
+        "instance": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/zones/europe-west1-b/instances/payments-recovery-1",
+        "instanceStatus": "RUNNING",
+        "currentAction": "NONE",
+        "instanceHealth": [
+          {
+            "detailedHealthState": "HEALTHY"
+          }
+        ],
+        "version": {
+          "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/demo-service-a-demo/global/instanceTemplates/payments-recovery"
+        }
+      },
+      "parentId": "//compute.googleapis.com/projects/demo-service-a-demo/regions/europe-west1/instanceGroupManagers/payments-recovery",
+      "asset": false
+    },
+    {
+      "collectionId": "collection-31",
+      "projectId": "demo-service-b-demo",
+      "projectNumber": "123456789013",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "//run.googleapis.com/projects/demo-service-b-demo/locations/europe-west2/services/balances",
+      "nativeType": "run.googleapis.com/Service",
+      "kind": "uninterpreted",
+      "configuration": {
+        "name": "//run.googleapis.com/projects/demo-service-b-demo/locations/europe-west2/services/balances",
+        "assetType": "run.googleapis.com/Service",
+        "resource": {
+          "location": "europe-west2",
+          "data": {
+            "name": "balances",
+            "labels": {
+              "service_id": "demo-service-b"
+            }
+          }
+        }
+      },
+      "parentId": null,
+      "asset": true
+    }
+  ],
+  "limitations": [
+    "Synthetic service fixture; no GCP project was queried.",
+    "Only selected Compute Engine, Cloud SQL and Cloud Asset Inventory APIs are covered; IAM, application dependencies and data-plane traffic are not collected.",
+    "Regional filtering applies after project-wide aggregated queries. Global resources and resources with unknown locations remain visible.",
+    "Cloud Asset Inventory is a supplementary inventory, may lag live configuration and is not proof of complete visibility.",
+    "Configured placement, labels and target sizes are not proof of current application health, transaction capacity or recovery guarantees."
+  ],
+  "synthetic": true
+}

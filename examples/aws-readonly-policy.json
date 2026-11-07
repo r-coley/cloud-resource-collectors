@@ -1,0 +1,27 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Sid": "ResourceCollectorsSelectedReadApis",
+    "Effect": "Allow",
+    "Action": [
+      "sts:GetCallerIdentity",
+      "tag:GetResources",
+      "ec2:DescribeInstances",
+      "ec2:DescribeSubnets",
+      "ec2:DescribeVpcs",
+      "ec2:DescribeCapacityReservations",
+      "ec2:DescribeLaunchTemplates",
+      "autoscaling:DescribeAutoScalingGroups",
+      "autoscaling:DescribePolicies",
+      "elasticloadbalancing:DescribeLoadBalancers",
+      "elasticloadbalancing:DescribeTargetGroups",
+      "elasticloadbalancing:DescribeListeners",
+      "elasticloadbalancing:DescribeTargetHealth",
+      "rds:DescribeDBInstances",
+      "rds:DescribeDBClusters",
+      "rds:DescribeDBSubnetGroups",
+      "rds:DescribeGlobalClusters"
+    ],
+    "Resource": "*"
+  }]
+}

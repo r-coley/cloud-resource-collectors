@@ -1,0 +1,1539 @@
+{
+  "schemaVersion": "cloud-inventory/1.0.0",
+  "snapshotId": "sha256:9574c3422b3d6449b0c520e764ef6eadbac511b1b1dd7bcf9af7e4e16bdde09c",
+  "origin": "synthetic",
+  "collector": {
+    "name": "cloud-resource-collectors/azure",
+    "version": "0.1.0"
+  },
+  "startedAt": "2026-11-07T12:00:00.000Z",
+  "finishedAt": "2026-11-07T12:00:00.000Z",
+  "scopes": [
+    {
+      "id": "azure:11111111-1111-4111-8111-111111111111",
+      "provider": "azure",
+      "partition": "public",
+      "accountId": "11111111-1111-4111-8111-111111111111",
+      "tenantId": null,
+      "selector": {
+        "serviceTagKey": "serviceId"
+      }
+    }
+  ],
+  "collections": [
+    {
+      "id": "collection-0",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "source": "Resources",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "recordCount": 14,
+      "errorCode": null
+    },
+    {
+      "id": "collection-1",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "source": "ResourceContainers",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "recordCount": 1,
+      "errorCode": null
+    }
+  ],
+  "services": [
+    {
+      "id": "DEMO-SERVICE-A",
+      "name": "Example service A",
+      "catalogueStatus": "catalogued",
+      "memberships": [
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/capacityreservationgroups/payments-reserve",
+          "role": "shared-or-untagged-dependency"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-primary",
+          "role": "owned"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-recovery",
+          "role": "owned"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.example/customresources/uninterpreted-component",
+          "role": "owned"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.insights/autoscalesettings/payments-primary-scale",
+          "role": "shared-or-untagged-dependency"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.insights/autoscalesettings/payments-recovery-scale",
+          "role": "shared-or-untagged-dependency"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+          "role": "owned"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary",
+          "role": "shared-or-untagged-dependency"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments",
+          "role": "owned"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments/backupshorttermretentionpolicies/default",
+          "role": "shared-or-untagged-dependency"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/failovergroups/payments-failover",
+          "role": "shared-or-untagged-dependency"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-recovery",
+          "role": "shared-or-untagged-dependency"
+        }
+      ],
+      "gaps": [
+        {
+          "code": "transaction-capacity",
+          "message": "Measured transaction capacity and workload demand are not discovered."
+        },
+        {
+          "code": "application-paths",
+          "message": "Configuration references do not prove customer journey dependencies."
+        },
+        {
+          "code": "runtime-health",
+          "message": "Configured resources are not assumed ready, healthy or able to serve transactions."
+        },
+        {
+          "code": "visibility",
+          "message": "Resource Graph permission coverage and unsupported provider details require review."
+        },
+        {
+          "code": "uninterpreted-types",
+          "message": "Some resource types have no resilience field mapping in this collector version."
+        }
+      ]
+    },
+    {
+      "id": "DEMO-SERVICE-B",
+      "name": "Balance enquiry",
+      "catalogueStatus": "catalogued",
+      "memberships": [
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.web/serverfarms/shared-plan",
+          "role": "shared-or-untagged-dependency"
+        },
+        {
+          "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.web/sites/balances-api",
+          "role": "owned"
+        }
+      ],
+      "gaps": [
+        {
+          "code": "transaction-capacity",
+          "message": "Measured transaction capacity and workload demand are not discovered."
+        },
+        {
+          "code": "application-paths",
+          "message": "Configuration references do not prove customer journey dependencies."
+        },
+        {
+          "code": "runtime-health",
+          "message": "Configured resources are not assumed ready, healthy or able to serve transactions."
+        },
+        {
+          "code": "visibility",
+          "message": "Resource Graph permission coverage and unsupported provider details require review."
+        }
+      ]
+    },
+    {
+      "id": "DEMO-SERVICE-C",
+      "name": "Transfers — no visible resources in example",
+      "catalogueStatus": "catalogued",
+      "memberships": [],
+      "gaps": [
+        {
+          "code": "transaction-capacity",
+          "message": "Measured transaction capacity and workload demand are not discovered."
+        },
+        {
+          "code": "application-paths",
+          "message": "Configuration references do not prove customer journey dependencies."
+        },
+        {
+          "code": "runtime-health",
+          "message": "Configured resources are not assumed ready, healthy or able to serve transactions."
+        },
+        {
+          "code": "visibility",
+          "message": "Resource Graph permission coverage and unsupported provider details require review."
+        },
+        {
+          "code": "no-tagged-resources",
+          "message": "No visible resources carry this service ID; this is not proof that the service is absent."
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry",
+      "nativeType": "Microsoft.Network/loadBalancers",
+      "kind": "routing",
+      "name": "payments-entry",
+      "region": "uksouth",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {
+        "serviceId": "DEMO-SERVICE-A"
+      },
+      "facts": [
+        {
+          "name": "sku.name",
+          "status": "observed",
+          "value": "Standard",
+          "evidenceId": "evidence-0",
+          "sourcePointer": "/sku/name"
+        },
+        {
+          "name": "properties.probes",
+          "status": "observed",
+          "value": [
+            {
+              "name": "ready",
+              "properties": {
+                "protocol": "Https",
+                "port": 443,
+                "requestPath": "/ready",
+                "intervalInSeconds": 5,
+                "numberOfProbes": 2
+              }
+            }
+          ],
+          "evidenceId": "evidence-0",
+          "sourcePointer": "/properties/probes"
+        },
+        {
+          "name": "properties.loadBalancingRules",
+          "status": "observed",
+          "value": [
+            {
+              "name": "https",
+              "properties": {
+                "probe": {
+                  "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry/probes/ready"
+                },
+                "backendAddressPool": {
+                  "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry/backendAddressPools/app"
+                }
+              }
+            }
+          ],
+          "evidenceId": "evidence-0",
+          "sourcePointer": "/properties/loadBalancingRules"
+        },
+        {
+          "name": "properties.backendAddressPools",
+          "status": "observed",
+          "value": [
+            {
+              "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry/backendAddressPools/app"
+            }
+          ],
+          "evidenceId": "evidence-0",
+          "sourcePointer": "/properties/backendAddressPools"
+        },
+        {
+          "name": "properties.frontendIPConfigurations",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-0",
+          "sourcePointer": "/properties/frontendIPConfigurations"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-0"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/capacityreservationgroups/payments-reserve",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/capacityReservationGroups/payments-reserve",
+      "nativeType": "Microsoft.Compute/capacityReservationGroups",
+      "kind": "allocation-reservation",
+      "name": "payments-reserve",
+      "region": "uksouth",
+      "zones": [
+        "1",
+        "2"
+      ],
+      "placementMeaning": "declared-placement-not-instance-distribution",
+      "tags": {},
+      "facts": [
+        {
+          "name": "properties.capacityReservations",
+          "status": "observed",
+          "value": [],
+          "evidenceId": "evidence-1",
+          "sourcePointer": "/properties/capacityReservations"
+        },
+        {
+          "name": "properties.virtualMachinesAssociated",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-1",
+          "sourcePointer": "/properties/virtualMachinesAssociated"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-1"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-primary",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/virtualMachineScaleSets/payments-primary",
+      "nativeType": "Microsoft.Compute/virtualMachineScaleSets",
+      "kind": "compute-group",
+      "name": "payments-primary",
+      "region": "uksouth",
+      "zones": [
+        "1",
+        "2"
+      ],
+      "placementMeaning": "declared-placement-not-instance-distribution",
+      "tags": {
+        "serviceId": "DEMO-SERVICE-A"
+      },
+      "facts": [
+        {
+          "name": "sku.capacity",
+          "status": "observed",
+          "value": 6,
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/sku/capacity"
+        },
+        {
+          "name": "sku.name",
+          "status": "observed",
+          "value": "Standard_D4s_v5",
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/sku/name"
+        },
+        {
+          "name": "properties.zoneBalance",
+          "status": "observed",
+          "value": true,
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/properties/zoneBalance"
+        },
+        {
+          "name": "properties.orchestrationMode",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/properties/orchestrationMode"
+        },
+        {
+          "name": "properties.automaticRepairsPolicy.enabled",
+          "status": "observed",
+          "value": true,
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/properties/automaticRepairsPolicy/enabled"
+        },
+        {
+          "name": "properties.automaticRepairsPolicy.gracePeriod",
+          "status": "observed",
+          "value": "PT10M",
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/properties/automaticRepairsPolicy/gracePeriod"
+        },
+        {
+          "name": "properties.automaticRepairsPolicy.repairAction",
+          "status": "observed",
+          "value": "Replace",
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/properties/automaticRepairsPolicy/repairAction"
+        },
+        {
+          "name": "properties.virtualMachineProfile.priority",
+          "status": "observed",
+          "value": "Regular",
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/properties/virtualMachineProfile/priority"
+        },
+        {
+          "name": "properties.virtualMachineProfile.capacityReservation.capacityReservationGroup.id",
+          "status": "observed",
+          "value": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/capacityReservationGroups/payments-reserve",
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/properties/virtualMachineProfile/capacityReservation/capacityReservationGroup/id"
+        },
+        {
+          "name": "properties.virtualMachineProfile.networkProfile.healthProbe.id",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-2",
+          "sourcePointer": "/properties/virtualMachineProfile/networkProfile/healthProbe/id"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-2"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.insights/autoscalesettings/payments-primary-scale",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Insights/autoscaleSettings/payments-primary-scale",
+      "nativeType": "Microsoft.Insights/autoscaleSettings",
+      "kind": "scaling-policy",
+      "name": "payments-primary-scale",
+      "region": "uksouth",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {},
+      "facts": [
+        {
+          "name": "properties.enabled",
+          "status": "observed",
+          "value": true,
+          "evidenceId": "evidence-3",
+          "sourcePointer": "/properties/enabled"
+        },
+        {
+          "name": "properties.targetResourceUri",
+          "status": "observed",
+          "value": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/virtualMachineScaleSets/payments-primary",
+          "evidenceId": "evidence-3",
+          "sourcePointer": "/properties/targetResourceUri"
+        },
+        {
+          "name": "properties.profiles",
+          "status": "observed",
+          "value": [
+            {
+              "name": "default",
+              "capacity": {
+                "minimum": "2",
+                "maximum": "12",
+                "default": "6"
+              },
+              "rules": []
+            }
+          ],
+          "evidenceId": "evidence-3",
+          "sourcePointer": "/properties/profiles"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-3"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-recovery",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/virtualMachineScaleSets/payments-recovery",
+      "nativeType": "Microsoft.Compute/virtualMachineScaleSets",
+      "kind": "compute-group",
+      "name": "payments-recovery",
+      "region": "ukwest",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {
+        "serviceId": "DEMO-SERVICE-A"
+      },
+      "facts": [
+        {
+          "name": "sku.capacity",
+          "status": "observed",
+          "value": 2,
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/sku/capacity"
+        },
+        {
+          "name": "sku.name",
+          "status": "observed",
+          "value": "Standard_D4s_v5",
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/sku/name"
+        },
+        {
+          "name": "properties.zoneBalance",
+          "status": "observed",
+          "value": true,
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/properties/zoneBalance"
+        },
+        {
+          "name": "properties.orchestrationMode",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/properties/orchestrationMode"
+        },
+        {
+          "name": "properties.automaticRepairsPolicy.enabled",
+          "status": "observed",
+          "value": true,
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/properties/automaticRepairsPolicy/enabled"
+        },
+        {
+          "name": "properties.automaticRepairsPolicy.gracePeriod",
+          "status": "observed",
+          "value": "PT10M",
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/properties/automaticRepairsPolicy/gracePeriod"
+        },
+        {
+          "name": "properties.automaticRepairsPolicy.repairAction",
+          "status": "observed",
+          "value": "Replace",
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/properties/automaticRepairsPolicy/repairAction"
+        },
+        {
+          "name": "properties.virtualMachineProfile.priority",
+          "status": "observed",
+          "value": "Regular",
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/properties/virtualMachineProfile/priority"
+        },
+        {
+          "name": "properties.virtualMachineProfile.capacityReservation.capacityReservationGroup.id",
+          "status": "observed",
+          "value": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/capacityReservationGroups/payments-reserve",
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/properties/virtualMachineProfile/capacityReservation/capacityReservationGroup/id"
+        },
+        {
+          "name": "properties.virtualMachineProfile.networkProfile.healthProbe.id",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-4",
+          "sourcePointer": "/properties/virtualMachineProfile/networkProfile/healthProbe/id"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-4"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.insights/autoscalesettings/payments-recovery-scale",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Insights/autoscaleSettings/payments-recovery-scale",
+      "nativeType": "Microsoft.Insights/autoscaleSettings",
+      "kind": "scaling-policy",
+      "name": "payments-recovery-scale",
+      "region": "ukwest",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {},
+      "facts": [
+        {
+          "name": "properties.enabled",
+          "status": "observed",
+          "value": true,
+          "evidenceId": "evidence-5",
+          "sourcePointer": "/properties/enabled"
+        },
+        {
+          "name": "properties.targetResourceUri",
+          "status": "observed",
+          "value": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/virtualMachineScaleSets/payments-recovery",
+          "evidenceId": "evidence-5",
+          "sourcePointer": "/properties/targetResourceUri"
+        },
+        {
+          "name": "properties.profiles",
+          "status": "observed",
+          "value": [
+            {
+              "name": "default",
+              "capacity": {
+                "minimum": "2",
+                "maximum": "12",
+                "default": "6"
+              },
+              "rules": []
+            }
+          ],
+          "evidenceId": "evidence-5",
+          "sourcePointer": "/properties/profiles"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-5"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary",
+      "nativeType": "Microsoft.Sql/servers",
+      "kind": "data-host",
+      "name": "payments-sql-primary",
+      "region": "uksouth",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {},
+      "facts": [
+        {
+          "name": "properties.state",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-6",
+          "sourcePointer": "/properties/state"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-6"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-recovery",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-recovery",
+      "nativeType": "Microsoft.Sql/servers",
+      "kind": "data-host",
+      "name": "payments-sql-recovery",
+      "region": "ukwest",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {},
+      "facts": [
+        {
+          "name": "properties.state",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-7",
+          "sourcePointer": "/properties/state"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-7"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary/databases/payments",
+      "nativeType": "Microsoft.Sql/servers/databases",
+      "kind": "database",
+      "name": "payments-sql-primary/payments",
+      "region": "uksouth",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {
+        "serviceId": "DEMO-SERVICE-A"
+      },
+      "facts": [
+        {
+          "name": "sku",
+          "status": "observed",
+          "value": {
+            "name": "GP_Gen5",
+            "tier": "GeneralPurpose",
+            "capacity": 4
+          },
+          "evidenceId": "evidence-8",
+          "sourcePointer": "/sku"
+        },
+        {
+          "name": "properties.zoneRedundant",
+          "status": "observed",
+          "value": true,
+          "evidenceId": "evidence-8",
+          "sourcePointer": "/properties/zoneRedundant"
+        },
+        {
+          "name": "properties.currentServiceObjectiveName",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-8",
+          "sourcePointer": "/properties/currentServiceObjectiveName"
+        },
+        {
+          "name": "properties.readScale",
+          "status": "observed",
+          "value": "Disabled",
+          "evidenceId": "evidence-8",
+          "sourcePointer": "/properties/readScale"
+        },
+        {
+          "name": "properties.requestedBackupStorageRedundancy",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-8",
+          "sourcePointer": "/properties/requestedBackupStorageRedundancy"
+        },
+        {
+          "name": "properties.currentBackupStorageRedundancy",
+          "status": "observed",
+          "value": "Geo",
+          "evidenceId": "evidence-8",
+          "sourcePointer": "/properties/currentBackupStorageRedundancy"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-8"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/failovergroups/payments-failover",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary/failoverGroups/payments-failover",
+      "nativeType": "Microsoft.Sql/servers/failoverGroups",
+      "kind": "replication-policy",
+      "name": "payments-sql-primary/payments-failover",
+      "region": "uksouth",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {},
+      "facts": [
+        {
+          "name": "properties.replicationRole",
+          "status": "observed",
+          "value": "Primary",
+          "evidenceId": "evidence-9",
+          "sourcePointer": "/properties/replicationRole"
+        },
+        {
+          "name": "properties.replicationState",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-9",
+          "sourcePointer": "/properties/replicationState"
+        },
+        {
+          "name": "properties.partnerServers",
+          "status": "observed",
+          "value": [
+            {
+              "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-recovery",
+              "location": "ukwest"
+            }
+          ],
+          "evidenceId": "evidence-9",
+          "sourcePointer": "/properties/partnerServers"
+        },
+        {
+          "name": "properties.databases",
+          "status": "observed",
+          "value": [
+            "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary/databases/payments"
+          ],
+          "evidenceId": "evidence-9",
+          "sourcePointer": "/properties/databases"
+        },
+        {
+          "name": "properties.readWriteEndpoint",
+          "status": "observed",
+          "value": {
+            "failoverPolicy": "Automatic",
+            "failoverWithDataLossGracePeriodMinutes": 60
+          },
+          "evidenceId": "evidence-9",
+          "sourcePointer": "/properties/readWriteEndpoint"
+        },
+        {
+          "name": "properties.readOnlyEndpoint",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-9",
+          "sourcePointer": "/properties/readOnlyEndpoint"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-9"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments/backupshorttermretentionpolicies/default",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary/databases/payments/backupShortTermRetentionPolicies/default",
+      "nativeType": "Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies",
+      "kind": "backup-policy",
+      "name": "payments-sql-primary/payments/default",
+      "region": "uksouth",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {},
+      "facts": [
+        {
+          "name": "properties.retentionDays",
+          "status": "observed",
+          "value": 14,
+          "evidenceId": "evidence-10",
+          "sourcePointer": "/properties/retentionDays"
+        },
+        {
+          "name": "properties.diffBackupIntervalInHours",
+          "status": "observed",
+          "value": 12,
+          "evidenceId": "evidence-10",
+          "sourcePointer": "/properties/diffBackupIntervalInHours"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-10"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.web/sites/balances-api",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Web/sites/balances-api",
+      "nativeType": "Microsoft.Web/sites",
+      "kind": "application-host",
+      "name": "balances-api",
+      "region": "uksouth",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {
+        "SERVICEID": "DEMO-SERVICE-B"
+      },
+      "facts": [
+        {
+          "name": "properties.serverFarmId",
+          "status": "observed",
+          "value": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Web/serverfarms/shared-plan",
+          "evidenceId": "evidence-11",
+          "sourcePointer": "/properties/serverFarmId"
+        },
+        {
+          "name": "properties.siteConfig.healthCheckPath",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-11",
+          "sourcePointer": "/properties/siteConfig/healthCheckPath"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-11"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.web/serverfarms/shared-plan",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Web/serverfarms/shared-plan",
+      "nativeType": "Microsoft.Web/serverfarms",
+      "kind": "compute-group",
+      "name": "shared-plan",
+      "region": "uksouth",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {},
+      "facts": [
+        {
+          "name": "sku",
+          "status": "observed",
+          "value": {
+            "name": "P1v3",
+            "capacity": 3
+          },
+          "evidenceId": "evidence-12",
+          "sourcePointer": "/sku"
+        },
+        {
+          "name": "properties.zoneRedundant",
+          "status": "observed",
+          "value": true,
+          "evidenceId": "evidence-12",
+          "sourcePointer": "/properties/zoneRedundant"
+        },
+        {
+          "name": "properties.maximumElasticWorkerCount",
+          "status": "unknown",
+          "value": null,
+          "evidenceId": "evidence-12",
+          "sourcePointer": "/properties/maximumElasticWorkerCount"
+        }
+      ],
+      "evidenceIds": [
+        "evidence-12"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.example/customresources/uninterpreted-component",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Example/customResources/uninterpreted-component",
+      "nativeType": "Microsoft.Example/customResources",
+      "kind": "uninterpreted",
+      "name": "uninterpreted-component",
+      "region": "uksouth",
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {
+        "serviceId": "DEMO-SERVICE-A"
+      },
+      "facts": [],
+      "evidenceIds": [
+        "evidence-13"
+      ]
+    },
+    {
+      "key": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111",
+      "scopeId": "azure:11111111-1111-4111-8111-111111111111",
+      "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111",
+      "nativeType": "Microsoft.Resources/subscriptions",
+      "kind": "uninterpreted",
+      "name": "Synthetic service subscription",
+      "region": null,
+      "zones": null,
+      "placementMeaning": "unknown-not-proof-of-no-zone-redundancy",
+      "tags": {},
+      "facts": [],
+      "evidenceIds": [
+        "evidence-14"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "5ff71d603fe42213c6b5fa22123b004829737e554b501f01d25e92ade4475b12",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry/backendaddresspools/app",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+        "resolution": "resource-ancestor-only"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-0",
+      "sourcePointer": "/properties/backendAddressPools/0/id"
+    },
+    {
+      "id": "aa811335a050940cc19f7626bc51158ffa7916d697d7682062a3a8b9189d92ab",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry/probes/ready",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+        "resolution": "resource-ancestor-only"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-0",
+      "sourcePointer": "/properties/loadBalancingRules/0/properties/probe/id"
+    },
+    {
+      "id": "3f0c7269f96f137a810f341f3763de7e000c666a650b36590ba86c028b4bb774",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry/backendaddresspools/app",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+        "resolution": "resource-ancestor-only"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-0",
+      "sourcePointer": "/properties/loadBalancingRules/0/properties/backendAddressPool/id"
+    },
+    {
+      "id": "bc436041db4870405fce84b1369e52f918db96b6ab9428baabe93f401ce080dd",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-primary",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/capacityreservationgroups/payments-reserve",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/capacityreservationgroups/payments-reserve",
+        "resolution": "exact-resource"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-2",
+      "sourcePointer": "/properties/virtualMachineProfile/capacityReservation/capacityReservationGroup/id"
+    },
+    {
+      "id": "0d172b5e71d5bef351549d7c7c8dd90c205964063ffef1f63bd0e21a1fc839d5",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-primary",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry/backendaddresspools/app",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+        "resolution": "resource-ancestor-only"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-2",
+      "sourcePointer": "/properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/0/properties/ipConfigurations/0/properties/loadBalancerBackendAddressPools/0/id"
+    },
+    {
+      "id": "1e0589a2bda4bba71837db1a3a3e1a41550be6a14b3df0db88cc2642d3789e8e",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.insights/autoscalesettings/payments-primary-scale",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-primary",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-primary",
+        "resolution": "exact-resource"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-3",
+      "sourcePointer": "/properties/targetResourceUri"
+    },
+    {
+      "id": "f85937edb9564bd7ed70fa40aa88c4d3b4d88c8dcf7c817dc701eb4fa7da8042",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-recovery",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/capacityreservationgroups/payments-reserve",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/capacityreservationgroups/payments-reserve",
+        "resolution": "exact-resource"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-4",
+      "sourcePointer": "/properties/virtualMachineProfile/capacityReservation/capacityReservationGroup/id"
+    },
+    {
+      "id": "be28f99c4dc58dfc65921a9ff38a27d7ee581d53ac3ab6dc46003e6a78321b8e",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-recovery",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry/backendaddresspools/app",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.network/loadbalancers/payments-entry",
+        "resolution": "resource-ancestor-only"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-4",
+      "sourcePointer": "/properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/0/properties/ipConfigurations/0/properties/loadBalancerBackendAddressPools/0/id"
+    },
+    {
+      "id": "d37be8e2efb7f0f2168daa00795b5690ec7310730dcc8976fbea2e3e7b4f8ccb",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.insights/autoscalesettings/payments-recovery-scale",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-recovery",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.compute/virtualmachinescalesets/payments-recovery",
+        "resolution": "exact-resource"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-5",
+      "sourcePointer": "/properties/targetResourceUri"
+    },
+    {
+      "id": "3114358c6980de37ecf379138625907e32a66312561ec39bb604a426ca709ec1",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary",
+        "resolution": "exact-resource"
+      },
+      "kind": "contained-by",
+      "assertion": "declared",
+      "evidenceId": "evidence-8",
+      "sourcePointer": "/id"
+    },
+    {
+      "id": "63296213e6ec585bf352a367121808cc878a1a8a7b105ce4f39488c0692eadf9",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/failovergroups/payments-failover",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-recovery",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-recovery",
+        "resolution": "exact-resource"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-9",
+      "sourcePointer": "/properties/partnerServers/0/id"
+    },
+    {
+      "id": "9774e36d1301e903adc043ef1b4f331fd21a9caf45e4ecccc2ff88a47b0b80da",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/failovergroups/payments-failover",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments",
+        "resolution": "exact-resource"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-9",
+      "sourcePointer": "/properties/databases/0"
+    },
+    {
+      "id": "aa02f1ea95725d04fa9e7654cb58e274e7d16d4d59690ed1c3d454f0db6760e3",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/failovergroups/payments-failover",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary",
+        "resolution": "exact-resource"
+      },
+      "kind": "contained-by",
+      "assertion": "declared",
+      "evidenceId": "evidence-9",
+      "sourcePointer": "/id"
+    },
+    {
+      "id": "d49434ac578c3833e760f42cd349131709b44fa3bc1bb4b14a29e43a5a0c6d32",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments/backupshorttermretentionpolicies/default",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.sql/servers/payments-sql-primary/databases/payments",
+        "resolution": "exact-resource"
+      },
+      "kind": "contained-by",
+      "assertion": "declared",
+      "evidenceId": "evidence-10",
+      "sourcePointer": "/id"
+    },
+    {
+      "id": "3543c92c75e58bedf1739f756a7a6a285a2e3aeba23149579546bcba3b38fbf8",
+      "from": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.web/sites/balances-api",
+      "target": {
+        "nativeId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.web/serverfarms/shared-plan",
+        "resourceKey": "azure:11111111-1111-4111-8111-111111111111:/subscriptions/11111111-1111-4111-8111-111111111111/resourcegroups/service-demo/providers/microsoft.web/serverfarms/shared-plan",
+        "resolution": "exact-resource"
+      },
+      "kind": "configuration-reference",
+      "assertion": "declared",
+      "evidenceId": "evidence-11",
+      "sourcePointer": "/properties/serverFarmId"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-0",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry",
+        "name": "payments-entry",
+        "type": "Microsoft.Network/loadBalancers",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {
+          "serviceId": "DEMO-SERVICE-A"
+        },
+        "properties": {
+          "probes": [
+            {
+              "name": "ready",
+              "properties": {
+                "protocol": "Https",
+                "port": 443,
+                "requestPath": "/ready",
+                "intervalInSeconds": 5,
+                "numberOfProbes": 2
+              }
+            }
+          ],
+          "backendAddressPools": [
+            {
+              "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry/backendAddressPools/app"
+            }
+          ],
+          "loadBalancingRules": [
+            {
+              "name": "https",
+              "properties": {
+                "probe": {
+                  "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry/probes/ready"
+                },
+                "backendAddressPool": {
+                  "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry/backendAddressPools/app"
+                }
+              }
+            }
+          ]
+        },
+        "sku": {
+          "name": "Standard"
+        }
+      }
+    },
+    {
+      "id": "evidence-1",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/capacityReservationGroups/payments-reserve",
+        "name": "payments-reserve",
+        "type": "Microsoft.Compute/capacityReservationGroups",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {},
+        "properties": {
+          "capacityReservations": []
+        },
+        "zones": [
+          "1",
+          "2"
+        ]
+      }
+    },
+    {
+      "id": "evidence-2",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/virtualMachineScaleSets/payments-primary",
+        "name": "payments-primary",
+        "type": "Microsoft.Compute/virtualMachineScaleSets",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {
+          "serviceId": "DEMO-SERVICE-A"
+        },
+        "properties": {
+          "zoneBalance": true,
+          "automaticRepairsPolicy": {
+            "enabled": true,
+            "gracePeriod": "PT10M",
+            "repairAction": "Replace"
+          },
+          "virtualMachineProfile": {
+            "priority": "Regular",
+            "capacityReservation": {
+              "capacityReservationGroup": {
+                "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/capacityReservationGroups/payments-reserve"
+              }
+            },
+            "networkProfile": {
+              "networkInterfaceConfigurations": [
+                {
+                  "properties": {
+                    "ipConfigurations": [
+                      {
+                        "properties": {
+                          "loadBalancerBackendAddressPools": [
+                            {
+                              "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry/backendAddressPools/app"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "sku": {
+          "name": "Standard_D4s_v5",
+          "capacity": 6
+        },
+        "zones": [
+          "1",
+          "2"
+        ]
+      }
+    },
+    {
+      "id": "evidence-3",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Insights/autoscaleSettings/payments-primary-scale",
+        "name": "payments-primary-scale",
+        "type": "Microsoft.Insights/autoscaleSettings",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {},
+        "properties": {
+          "enabled": true,
+          "targetResourceUri": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/virtualMachineScaleSets/payments-primary",
+          "profiles": [
+            {
+              "name": "default",
+              "capacity": {
+                "minimum": "2",
+                "maximum": "12",
+                "default": "6"
+              },
+              "rules": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "evidence-4",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/virtualMachineScaleSets/payments-recovery",
+        "name": "payments-recovery",
+        "type": "Microsoft.Compute/virtualMachineScaleSets",
+        "location": "ukwest",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {
+          "serviceId": "DEMO-SERVICE-A"
+        },
+        "properties": {
+          "zoneBalance": true,
+          "automaticRepairsPolicy": {
+            "enabled": true,
+            "gracePeriod": "PT10M",
+            "repairAction": "Replace"
+          },
+          "virtualMachineProfile": {
+            "priority": "Regular",
+            "capacityReservation": {
+              "capacityReservationGroup": {
+                "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/capacityReservationGroups/payments-reserve"
+              }
+            },
+            "networkProfile": {
+              "networkInterfaceConfigurations": [
+                {
+                  "properties": {
+                    "ipConfigurations": [
+                      {
+                        "properties": {
+                          "loadBalancerBackendAddressPools": [
+                            {
+                              "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Network/loadBalancers/payments-entry/backendAddressPools/app"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "sku": {
+          "name": "Standard_D4s_v5",
+          "capacity": 2
+        }
+      }
+    },
+    {
+      "id": "evidence-5",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Insights/autoscaleSettings/payments-recovery-scale",
+        "name": "payments-recovery-scale",
+        "type": "Microsoft.Insights/autoscaleSettings",
+        "location": "ukwest",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {},
+        "properties": {
+          "enabled": true,
+          "targetResourceUri": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Compute/virtualMachineScaleSets/payments-recovery",
+          "profiles": [
+            {
+              "name": "default",
+              "capacity": {
+                "minimum": "2",
+                "maximum": "12",
+                "default": "6"
+              },
+              "rules": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "evidence-6",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary",
+        "name": "payments-sql-primary",
+        "type": "Microsoft.Sql/servers",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {},
+        "properties": {}
+      }
+    },
+    {
+      "id": "evidence-7",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-recovery",
+        "name": "payments-sql-recovery",
+        "type": "Microsoft.Sql/servers",
+        "location": "ukwest",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {},
+        "properties": {}
+      }
+    },
+    {
+      "id": "evidence-8",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary/databases/payments",
+        "name": "payments-sql-primary/payments",
+        "type": "Microsoft.Sql/servers/databases",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {
+          "serviceId": "DEMO-SERVICE-A"
+        },
+        "properties": {
+          "zoneRedundant": true,
+          "readScale": "Disabled",
+          "currentBackupStorageRedundancy": "Geo"
+        },
+        "sku": {
+          "name": "GP_Gen5",
+          "tier": "GeneralPurpose",
+          "capacity": 4
+        }
+      }
+    },
+    {
+      "id": "evidence-9",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary/failoverGroups/payments-failover",
+        "name": "payments-sql-primary/payments-failover",
+        "type": "Microsoft.Sql/servers/failoverGroups",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {},
+        "properties": {
+          "replicationRole": "Primary",
+          "partnerServers": [
+            {
+              "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-recovery",
+              "location": "ukwest"
+            }
+          ],
+          "databases": [
+            "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary/databases/payments"
+          ],
+          "readWriteEndpoint": {
+            "failoverPolicy": "Automatic",
+            "failoverWithDataLossGracePeriodMinutes": 60
+          }
+        }
+      }
+    },
+    {
+      "id": "evidence-10",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Sql/servers/payments-sql-primary/databases/payments/backupShortTermRetentionPolicies/default",
+        "name": "payments-sql-primary/payments/default",
+        "type": "Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {},
+        "properties": {
+          "retentionDays": 14,
+          "diffBackupIntervalInHours": 12
+        }
+      }
+    },
+    {
+      "id": "evidence-11",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Web/sites/balances-api",
+        "name": "balances-api",
+        "type": "Microsoft.Web/sites",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {
+          "SERVICEID": "DEMO-SERVICE-B"
+        },
+        "properties": {
+          "serverFarmId": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Web/serverfarms/shared-plan"
+        }
+      }
+    },
+    {
+      "id": "evidence-12",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Web/serverfarms/shared-plan",
+        "name": "shared-plan",
+        "type": "Microsoft.Web/serverfarms",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {},
+        "properties": {
+          "zoneRedundant": true
+        },
+        "sku": {
+          "name": "P1v3",
+          "capacity": 3
+        }
+      }
+    },
+    {
+      "id": "evidence-13",
+      "collectionId": "collection-0",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111/resourceGroups/service-demo/providers/Microsoft.Example/customResources/uninterpreted-component",
+        "name": "uninterpreted-component",
+        "type": "Microsoft.Example/customResources",
+        "location": "uksouth",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "resourceGroup": "service-demo",
+        "tags": {
+          "serviceId": "DEMO-SERVICE-A"
+        },
+        "properties": {}
+      }
+    },
+    {
+      "id": "evidence-14",
+      "collectionId": "collection-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "redaction": "collector-filtered-not-guaranteed-secret-free",
+      "record": {
+        "id": "/subscriptions/11111111-1111-4111-8111-111111111111",
+        "name": "Synthetic service subscription",
+        "type": "Microsoft.Resources/subscriptions",
+        "subscriptionId": "11111111-1111-4111-8111-111111111111",
+        "properties": {}
+      }
+    }
+  ],
+  "limitations": [
+    "Synthetic fixture; no live service resources were queried."
+  ],
+  "simulationReady": false
+}

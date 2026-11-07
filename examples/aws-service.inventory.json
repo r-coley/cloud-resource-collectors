@@ -1,0 +1,1857 @@
+{
+  "inventoryVersion": "aws-api-inventory/0.1",
+  "provider": "aws",
+  "accounts": [
+    {
+      "id": "111122223333",
+      "partition": "aws",
+      "regions": [
+        "eu-west-2",
+        "eu-west-1"
+      ]
+    }
+  ],
+  "startedAt": "2026-11-07T12:00:00.000Z",
+  "finishedAt": "2026-11-07T12:00:00.000Z",
+  "collections": [
+    {
+      "id": "collection-0",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "resourcegroupstaggingapi:get-resources",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-1",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "ec2:describe-instances",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 6,
+      "errorCode": null
+    },
+    {
+      "id": "collection-2",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "ec2:describe-subnets",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-3",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "ec2:describe-vpcs",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-4",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "ec2:describe-capacity-reservations",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-5",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "ec2:describe-launch-templates",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-6",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "autoscaling:describe-auto-scaling-groups",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-7",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "autoscaling:describe-policies",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-8",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "elbv2:describe-load-balancers",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-9",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "elbv2:describe-target-groups",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-10",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "rds:describe-db-instances",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-11",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "rds:describe-db-clusters",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-12",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "rds:describe-db-subnet-groups",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-13",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "rds:describe-global-clusters",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-14",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "elbv2:describe-listeners",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:loadbalancer/app/payments/example0",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-15",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "source": "elbv2:describe-target-health",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 6,
+      "errorCode": null
+    },
+    {
+      "id": "collection-16",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "resourcegroupstaggingapi:get-resources",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-17",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "ec2:describe-instances",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-18",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "ec2:describe-subnets",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-19",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "ec2:describe-vpcs",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-20",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "ec2:describe-capacity-reservations",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 0,
+      "errorCode": null
+    },
+    {
+      "id": "collection-21",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "ec2:describe-launch-templates",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-22",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "autoscaling:describe-auto-scaling-groups",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-23",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "autoscaling:describe-policies",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-24",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "elbv2:describe-load-balancers",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-25",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "elbv2:describe-target-groups",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-26",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "rds:describe-db-instances",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    },
+    {
+      "id": "collection-27",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "rds:describe-db-clusters",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-28",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "rds:describe-db-subnet-groups",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-29",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "elbv2:describe-listeners",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/payments/example1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 1,
+      "errorCode": null
+    },
+    {
+      "id": "collection-30",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "source": "elbv2:describe-target-health",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/payments/example1",
+      "status": "collected",
+      "paginationComplete": true,
+      "permissionCoverage": "unverified",
+      "startedAt": "2026-11-07T12:00:00.000Z",
+      "finishedAt": "2026-11-07T12:00:00.000Z",
+      "pages": 1,
+      "recordCount": 2,
+      "errorCode": null
+    }
+  ],
+  "records": [
+    {
+      "collectionId": "collection-0",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:loadbalancer/app/payments/example0",
+      "nativeType": "tagged-resource",
+      "kind": "uninterpreted",
+      "parentId": null,
+      "configuration": {
+        "ResourceARN": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:loadbalancer/app/payments/example0",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-0",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:lambda:eu-west-2:111122223333:function:balances",
+      "nativeType": "tagged-resource",
+      "kind": "uninterpreted",
+      "parentId": null,
+      "configuration": {
+        "ResourceARN": "arn:aws:lambda:eu-west-2:111122223333:function:balances",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-B"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-1",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:instance/i-00000000",
+      "nativeType": "AWS::EC2::Instance",
+      "kind": "compute",
+      "parentId": null,
+      "configuration": {
+        "InstanceId": "i-00000000",
+        "InstanceType": "m7i.large",
+        "State": {
+          "Name": "running"
+        },
+        "Placement": {
+          "AvailabilityZone": "eu-west-2a",
+          "AvailabilityZoneId": "euw2-az1"
+        },
+        "SubnetId": "subnet-example0a",
+        "VpcId": "vpc-example0",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ],
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example0",
+          "Version": "1"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-1",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:instance/i-00000001",
+      "nativeType": "AWS::EC2::Instance",
+      "kind": "compute",
+      "parentId": null,
+      "configuration": {
+        "InstanceId": "i-00000001",
+        "InstanceType": "m7i.large",
+        "State": {
+          "Name": "running"
+        },
+        "Placement": {
+          "AvailabilityZone": "eu-west-2b",
+          "AvailabilityZoneId": "euw2-az2"
+        },
+        "SubnetId": "subnet-example0b",
+        "VpcId": "vpc-example0",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ],
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example0",
+          "Version": "1"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-1",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:instance/i-00000002",
+      "nativeType": "AWS::EC2::Instance",
+      "kind": "compute",
+      "parentId": null,
+      "configuration": {
+        "InstanceId": "i-00000002",
+        "InstanceType": "m7i.large",
+        "State": {
+          "Name": "running"
+        },
+        "Placement": {
+          "AvailabilityZone": "eu-west-2a",
+          "AvailabilityZoneId": "euw2-az1"
+        },
+        "SubnetId": "subnet-example0a",
+        "VpcId": "vpc-example0",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ],
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example0",
+          "Version": "1"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-1",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:instance/i-00000003",
+      "nativeType": "AWS::EC2::Instance",
+      "kind": "compute",
+      "parentId": null,
+      "configuration": {
+        "InstanceId": "i-00000003",
+        "InstanceType": "m7i.large",
+        "State": {
+          "Name": "running"
+        },
+        "Placement": {
+          "AvailabilityZone": "eu-west-2b",
+          "AvailabilityZoneId": "euw2-az2"
+        },
+        "SubnetId": "subnet-example0b",
+        "VpcId": "vpc-example0",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ],
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example0",
+          "Version": "1"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-1",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:instance/i-00000004",
+      "nativeType": "AWS::EC2::Instance",
+      "kind": "compute",
+      "parentId": null,
+      "configuration": {
+        "InstanceId": "i-00000004",
+        "InstanceType": "m7i.large",
+        "State": {
+          "Name": "running"
+        },
+        "Placement": {
+          "AvailabilityZone": "eu-west-2a",
+          "AvailabilityZoneId": "euw2-az1"
+        },
+        "SubnetId": "subnet-example0a",
+        "VpcId": "vpc-example0",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ],
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example0",
+          "Version": "1"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-1",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:instance/i-00000005",
+      "nativeType": "AWS::EC2::Instance",
+      "kind": "compute",
+      "parentId": null,
+      "configuration": {
+        "InstanceId": "i-00000005",
+        "InstanceType": "m7i.large",
+        "State": {
+          "Name": "running"
+        },
+        "Placement": {
+          "AvailabilityZone": "eu-west-2b",
+          "AvailabilityZoneId": "euw2-az2"
+        },
+        "SubnetId": "subnet-example0b",
+        "VpcId": "vpc-example0",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ],
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example0",
+          "Version": "1"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-2",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:subnet/subnet-example0a",
+      "nativeType": "AWS::EC2::Subnet",
+      "kind": "network",
+      "parentId": null,
+      "configuration": {
+        "SubnetId": "subnet-example0a",
+        "VpcId": "vpc-example0",
+        "AvailabilityZone": "eu-west-2a",
+        "AvailabilityZoneId": "euw2-az1",
+        "AvailableIpAddressCount": 100,
+        "State": "available"
+      }
+    },
+    {
+      "collectionId": "collection-2",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:subnet/subnet-example0b",
+      "nativeType": "AWS::EC2::Subnet",
+      "kind": "network",
+      "parentId": null,
+      "configuration": {
+        "SubnetId": "subnet-example0b",
+        "VpcId": "vpc-example0",
+        "AvailabilityZone": "eu-west-2b",
+        "AvailabilityZoneId": "euw2-az2",
+        "AvailableIpAddressCount": 100,
+        "State": "available"
+      }
+    },
+    {
+      "collectionId": "collection-3",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:vpc/vpc-example0",
+      "nativeType": "AWS::EC2::VPC",
+      "kind": "network",
+      "parentId": null,
+      "configuration": {
+        "VpcId": "vpc-example0",
+        "State": "available",
+        "CidrBlock": "10.0.0.0/16",
+        "IsDefault": false
+      }
+    },
+    {
+      "collectionId": "collection-4",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:capacity-reservation/cr-example0",
+      "nativeType": "AWS::EC2::CapacityReservation",
+      "kind": "allocation-reservation",
+      "parentId": null,
+      "configuration": {
+        "CapacityReservationId": "cr-example0",
+        "AvailabilityZone": "eu-west-2a",
+        "InstanceType": "m7i.large",
+        "InstancePlatform": "Linux/UNIX",
+        "Tenancy": "default",
+        "TotalInstanceCount": 3,
+        "AvailableInstanceCount": 0,
+        "State": "active",
+        "InstanceMatchCriteria": "targeted",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-5",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-2:111122223333:launch-template/lt-example0",
+      "nativeType": "AWS::EC2::LaunchTemplate",
+      "kind": "compute-template",
+      "parentId": null,
+      "configuration": {
+        "LaunchTemplateId": "lt-example0",
+        "LaunchTemplateName": "payments-primary",
+        "DefaultVersionNumber": 1,
+        "LatestVersionNumber": 1
+      }
+    },
+    {
+      "collectionId": "collection-6",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:autoscaling:eu-west-2:111122223333:autoScalingGroup:example-0:autoScalingGroupName/payments-primary",
+      "nativeType": "AWS::AutoScaling::AutoScalingGroup",
+      "kind": "compute-group",
+      "parentId": null,
+      "configuration": {
+        "AutoScalingGroupARN": "arn:aws:autoscaling:eu-west-2:111122223333:autoScalingGroup:example-0:autoScalingGroupName/payments-primary",
+        "AutoScalingGroupName": "payments-primary",
+        "MinSize": 6,
+        "MaxSize": 12,
+        "DesiredCapacity": 6,
+        "DesiredCapacityType": "units",
+        "AvailabilityZones": [
+          "eu-west-2a",
+          "eu-west-2b"
+        ],
+        "VPCZoneIdentifier": "subnet-example0a,subnet-example0b",
+        "HealthCheckType": "ELB",
+        "HealthCheckGracePeriod": 120,
+        "DefaultInstanceWarmup": 60,
+        "CapacityRebalance": true,
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example0",
+          "Version": "1"
+        },
+        "Instances": [
+          {
+            "InstanceId": "i-00000000",
+            "AvailabilityZone": "eu-west-2a",
+            "LifecycleState": "InService",
+            "HealthStatus": "Healthy"
+          },
+          {
+            "InstanceId": "i-00000001",
+            "AvailabilityZone": "eu-west-2b",
+            "LifecycleState": "InService",
+            "HealthStatus": "Healthy"
+          },
+          {
+            "InstanceId": "i-00000002",
+            "AvailabilityZone": "eu-west-2a",
+            "LifecycleState": "InService",
+            "HealthStatus": "Healthy"
+          },
+          {
+            "InstanceId": "i-00000003",
+            "AvailabilityZone": "eu-west-2b",
+            "LifecycleState": "InService",
+            "HealthStatus": "Healthy"
+          },
+          {
+            "InstanceId": "i-00000004",
+            "AvailabilityZone": "eu-west-2a",
+            "LifecycleState": "InService",
+            "HealthStatus": "Healthy"
+          },
+          {
+            "InstanceId": "i-00000005",
+            "AvailabilityZone": "eu-west-2b",
+            "LifecycleState": "InService",
+            "HealthStatus": "Healthy"
+          }
+        ],
+        "TargetGroupARNs": [
+          "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0"
+        ],
+        "SuspendedProcesses": [],
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-7",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:autoscaling:eu-west-2:111122223333:scalingPolicy:example0:autoScalingGroupName/payments-primary:policyName/cpu",
+      "nativeType": "AWS::AutoScaling::ScalingPolicy",
+      "kind": "scaling-policy",
+      "parentId": null,
+      "configuration": {
+        "PolicyARN": "arn:aws:autoscaling:eu-west-2:111122223333:scalingPolicy:example0:autoScalingGroupName/payments-primary:policyName/cpu",
+        "AutoScalingGroupName": "payments-primary",
+        "PolicyType": "TargetTrackingScaling",
+        "TargetTrackingConfiguration": {
+          "TargetValue": 60,
+          "PredefinedMetricSpecification": {
+            "PredefinedMetricType": "ASGAverageCPUUtilization"
+          }
+        }
+      }
+    },
+    {
+      "collectionId": "collection-8",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:loadbalancer/app/payments/example0",
+      "nativeType": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "kind": "routing",
+      "parentId": null,
+      "configuration": {
+        "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:loadbalancer/app/payments/example0",
+        "LoadBalancerName": "payments-primary",
+        "Type": "application",
+        "Scheme": "internal",
+        "State": {
+          "Code": "active"
+        },
+        "VpcId": "vpc-example0",
+        "AvailabilityZones": [
+          {
+            "ZoneName": "eu-west-2a",
+            "SubnetId": "subnet-example0a"
+          },
+          {
+            "ZoneName": "eu-west-2b",
+            "SubnetId": "subnet-example0b"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-9",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "kind": "routing-pool",
+      "parentId": null,
+      "configuration": {
+        "TargetGroupArn": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0",
+        "TargetGroupName": "payments-primary",
+        "TargetType": "instance",
+        "Protocol": "HTTP",
+        "Port": 8080,
+        "VpcId": "vpc-example0",
+        "LoadBalancerArns": [
+          "arn:aws:elasticloadbalancing:eu-west-2:111122223333:loadbalancer/app/payments/example0"
+        ],
+        "HealthCheckProtocol": "HTTP",
+        "HealthCheckPort": "traffic-port",
+        "HealthCheckPath": "/ready",
+        "HealthCheckIntervalSeconds": 10,
+        "HealthCheckTimeoutSeconds": 5,
+        "HealthyThresholdCount": 2,
+        "UnhealthyThresholdCount": 3
+      }
+    },
+    {
+      "collectionId": "collection-10",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:rds:eu-west-2:111122223333:db:payments-0-0",
+      "nativeType": "AWS::RDS::DBInstance",
+      "kind": "database",
+      "parentId": null,
+      "configuration": {
+        "DBInstanceArn": "arn:aws:rds:eu-west-2:111122223333:db:payments-0-0",
+        "DBInstanceIdentifier": "payments-0-0",
+        "Engine": "aurora-postgresql",
+        "DBInstanceClass": "db.r7g.large",
+        "DBInstanceStatus": "available",
+        "MultiAZ": false,
+        "AvailabilityZone": "eu-west-2a",
+        "DBClusterIdentifier": "payments-0",
+        "BackupRetentionPeriod": 7,
+        "StorageEncrypted": true,
+        "PubliclyAccessible": false,
+        "DBSubnetGroup": {
+          "DBSubnetGroupName": "example-0",
+          "VpcId": "vpc-example0",
+          "Subnets": [
+            {
+              "SubnetIdentifier": "subnet-example0a"
+            },
+            {
+              "SubnetIdentifier": "subnet-example0b"
+            }
+          ]
+        },
+        "TagList": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-10",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:rds:eu-west-2:111122223333:db:payments-0-1",
+      "nativeType": "AWS::RDS::DBInstance",
+      "kind": "database",
+      "parentId": null,
+      "configuration": {
+        "DBInstanceArn": "arn:aws:rds:eu-west-2:111122223333:db:payments-0-1",
+        "DBInstanceIdentifier": "payments-0-1",
+        "Engine": "aurora-postgresql",
+        "DBInstanceClass": "db.r7g.large",
+        "DBInstanceStatus": "available",
+        "MultiAZ": false,
+        "AvailabilityZone": "eu-west-2b",
+        "DBClusterIdentifier": "payments-0",
+        "BackupRetentionPeriod": 7,
+        "StorageEncrypted": true,
+        "PubliclyAccessible": false,
+        "DBSubnetGroup": {
+          "DBSubnetGroupName": "example-0",
+          "VpcId": "vpc-example0",
+          "Subnets": [
+            {
+              "SubnetIdentifier": "subnet-example0a"
+            },
+            {
+              "SubnetIdentifier": "subnet-example0b"
+            }
+          ]
+        },
+        "TagList": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-11",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:rds:eu-west-2:111122223333:cluster:payments-0",
+      "nativeType": "AWS::RDS::DBCluster",
+      "kind": "database-cluster",
+      "parentId": null,
+      "configuration": {
+        "DBClusterArn": "arn:aws:rds:eu-west-2:111122223333:cluster:payments-0",
+        "DBClusterIdentifier": "payments-0",
+        "Engine": "aurora-postgresql",
+        "Status": "available",
+        "MultiAZ": true,
+        "AvailabilityZones": [
+          "eu-west-2a",
+          "eu-west-2b"
+        ],
+        "DBClusterMembers": [
+          {
+            "DBInstanceIdentifier": "payments-0-0",
+            "IsClusterWriter": true,
+            "PromotionTier": 0
+          },
+          {
+            "DBInstanceIdentifier": "payments-0-1",
+            "IsClusterWriter": false,
+            "PromotionTier": 1
+          }
+        ],
+        "GlobalClusterIdentifier": "payments-global",
+        "BackupRetentionPeriod": 7,
+        "StorageEncrypted": true,
+        "DBSubnetGroup": "example-0",
+        "TagList": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-12",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:rds:eu-west-2:111122223333:subgrp:example-0",
+      "nativeType": "AWS::RDS::DBSubnetGroup",
+      "kind": "network-group",
+      "parentId": null,
+      "configuration": {
+        "DBSubnetGroupArn": "arn:aws:rds:eu-west-2:111122223333:subgrp:example-0",
+        "DBSubnetGroupName": "example-0",
+        "SubnetGroupStatus": "Complete",
+        "VpcId": "vpc-example0",
+        "Subnets": [
+          {
+            "SubnetIdentifier": "subnet-example0a",
+            "SubnetAvailabilityZone": {
+              "Name": "eu-west-2a"
+            },
+            "SubnetStatus": "Active"
+          },
+          {
+            "SubnetIdentifier": "subnet-example0b",
+            "SubnetAvailabilityZone": {
+              "Name": "eu-west-2b"
+            },
+            "SubnetStatus": "Active"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-13",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:rds::111122223333:global-cluster:payments-global",
+      "nativeType": "AWS::RDS::GlobalCluster",
+      "kind": "replication-policy",
+      "parentId": null,
+      "configuration": {
+        "GlobalClusterArn": "arn:aws:rds::111122223333:global-cluster:payments-global",
+        "GlobalClusterIdentifier": "payments-global",
+        "Status": "available",
+        "Engine": "aurora-postgresql",
+        "StorageEncrypted": true,
+        "GlobalClusterMembers": [
+          {
+            "DBClusterArn": "arn:aws:rds:eu-west-2:111122223333:cluster:payments-0",
+            "IsWriter": true
+          },
+          {
+            "DBClusterArn": "arn:aws:rds:eu-west-1:111122223333:cluster:payments-1",
+            "IsWriter": false
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-14",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:listener/app/payments/example0/listener",
+      "nativeType": "AWS::ElasticLoadBalancingV2::Listener",
+      "kind": "routing-rule",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:loadbalancer/app/payments/example0",
+      "configuration": {
+        "ListenerArn": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:listener/app/payments/example0/listener",
+        "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:loadbalancer/app/payments/example0",
+        "Protocol": "HTTPS",
+        "Port": 443,
+        "DefaultActions": [
+          {
+            "Type": "forward",
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-15",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0#target/i-00000000/8080/",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetHealth",
+      "kind": "health-observation",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0",
+      "configuration": {
+        "Target": {
+          "Id": "i-00000000",
+          "Port": 8080
+        },
+        "TargetHealth": {
+          "State": "healthy"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-15",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0#target/i-00000001/8080/",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetHealth",
+      "kind": "health-observation",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0",
+      "configuration": {
+        "Target": {
+          "Id": "i-00000001",
+          "Port": 8080
+        },
+        "TargetHealth": {
+          "State": "healthy"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-15",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0#target/i-00000002/8080/",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetHealth",
+      "kind": "health-observation",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0",
+      "configuration": {
+        "Target": {
+          "Id": "i-00000002",
+          "Port": 8080
+        },
+        "TargetHealth": {
+          "State": "healthy"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-15",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0#target/i-00000003/8080/",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetHealth",
+      "kind": "health-observation",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0",
+      "configuration": {
+        "Target": {
+          "Id": "i-00000003",
+          "Port": 8080
+        },
+        "TargetHealth": {
+          "State": "healthy"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-15",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0#target/i-00000004/8080/",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetHealth",
+      "kind": "health-observation",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0",
+      "configuration": {
+        "Target": {
+          "Id": "i-00000004",
+          "Port": 8080
+        },
+        "TargetHealth": {
+          "State": "healthy"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-15",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-2",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0#target/i-00000005/8080/",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetHealth",
+      "kind": "health-observation",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-2:111122223333:targetgroup/payments/example0",
+      "configuration": {
+        "Target": {
+          "Id": "i-00000005",
+          "Port": 8080
+        },
+        "TargetHealth": {
+          "State": "healthy"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-16",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/payments/example1",
+      "nativeType": "tagged-resource",
+      "kind": "uninterpreted",
+      "parentId": null,
+      "configuration": {
+        "ResourceARN": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/payments/example1",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-17",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-1:111122223333:instance/i-00000010",
+      "nativeType": "AWS::EC2::Instance",
+      "kind": "compute",
+      "parentId": null,
+      "configuration": {
+        "InstanceId": "i-00000010",
+        "InstanceType": "m7i.large",
+        "State": {
+          "Name": "running"
+        },
+        "Placement": {
+          "AvailabilityZone": "eu-west-1a",
+          "AvailabilityZoneId": "euw1-az1"
+        },
+        "SubnetId": "subnet-example1a",
+        "VpcId": "vpc-example1",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ],
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example1",
+          "Version": "1"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-17",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-1:111122223333:instance/i-00000011",
+      "nativeType": "AWS::EC2::Instance",
+      "kind": "compute",
+      "parentId": null,
+      "configuration": {
+        "InstanceId": "i-00000011",
+        "InstanceType": "m7i.large",
+        "State": {
+          "Name": "running"
+        },
+        "Placement": {
+          "AvailabilityZone": "eu-west-1b",
+          "AvailabilityZoneId": "euw1-az2"
+        },
+        "SubnetId": "subnet-example1b",
+        "VpcId": "vpc-example1",
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ],
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example1",
+          "Version": "1"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-18",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-1:111122223333:subnet/subnet-example1a",
+      "nativeType": "AWS::EC2::Subnet",
+      "kind": "network",
+      "parentId": null,
+      "configuration": {
+        "SubnetId": "subnet-example1a",
+        "VpcId": "vpc-example1",
+        "AvailabilityZone": "eu-west-1a",
+        "AvailabilityZoneId": "euw1-az1",
+        "AvailableIpAddressCount": 100,
+        "State": "available"
+      }
+    },
+    {
+      "collectionId": "collection-18",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-1:111122223333:subnet/subnet-example1b",
+      "nativeType": "AWS::EC2::Subnet",
+      "kind": "network",
+      "parentId": null,
+      "configuration": {
+        "SubnetId": "subnet-example1b",
+        "VpcId": "vpc-example1",
+        "AvailabilityZone": "eu-west-1b",
+        "AvailabilityZoneId": "euw1-az2",
+        "AvailableIpAddressCount": 100,
+        "State": "available"
+      }
+    },
+    {
+      "collectionId": "collection-19",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-1:111122223333:vpc/vpc-example1",
+      "nativeType": "AWS::EC2::VPC",
+      "kind": "network",
+      "parentId": null,
+      "configuration": {
+        "VpcId": "vpc-example1",
+        "State": "available",
+        "CidrBlock": "10.1.0.0/16",
+        "IsDefault": false
+      }
+    },
+    {
+      "collectionId": "collection-21",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:ec2:eu-west-1:111122223333:launch-template/lt-example1",
+      "nativeType": "AWS::EC2::LaunchTemplate",
+      "kind": "compute-template",
+      "parentId": null,
+      "configuration": {
+        "LaunchTemplateId": "lt-example1",
+        "LaunchTemplateName": "payments-recovery",
+        "DefaultVersionNumber": 1,
+        "LatestVersionNumber": 1
+      }
+    },
+    {
+      "collectionId": "collection-22",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:autoscaling:eu-west-1:111122223333:autoScalingGroup:example-1:autoScalingGroupName/payments-recovery",
+      "nativeType": "AWS::AutoScaling::AutoScalingGroup",
+      "kind": "compute-group",
+      "parentId": null,
+      "configuration": {
+        "AutoScalingGroupARN": "arn:aws:autoscaling:eu-west-1:111122223333:autoScalingGroup:example-1:autoScalingGroupName/payments-recovery",
+        "AutoScalingGroupName": "payments-recovery",
+        "MinSize": 2,
+        "MaxSize": 12,
+        "DesiredCapacity": 2,
+        "DesiredCapacityType": "units",
+        "AvailabilityZones": [
+          "eu-west-1a",
+          "eu-west-1b"
+        ],
+        "VPCZoneIdentifier": "subnet-example1a,subnet-example1b",
+        "HealthCheckType": "ELB",
+        "HealthCheckGracePeriod": 120,
+        "DefaultInstanceWarmup": 60,
+        "CapacityRebalance": true,
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-example1",
+          "Version": "1"
+        },
+        "Instances": [
+          {
+            "InstanceId": "i-00000010",
+            "AvailabilityZone": "eu-west-1a",
+            "LifecycleState": "InService",
+            "HealthStatus": "Healthy"
+          },
+          {
+            "InstanceId": "i-00000011",
+            "AvailabilityZone": "eu-west-1b",
+            "LifecycleState": "InService",
+            "HealthStatus": "Healthy"
+          }
+        ],
+        "TargetGroupARNs": [
+          "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/payments/example1"
+        ],
+        "SuspendedProcesses": [],
+        "Tags": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-23",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:autoscaling:eu-west-1:111122223333:scalingPolicy:example1:autoScalingGroupName/payments-recovery:policyName/cpu",
+      "nativeType": "AWS::AutoScaling::ScalingPolicy",
+      "kind": "scaling-policy",
+      "parentId": null,
+      "configuration": {
+        "PolicyARN": "arn:aws:autoscaling:eu-west-1:111122223333:scalingPolicy:example1:autoScalingGroupName/payments-recovery:policyName/cpu",
+        "AutoScalingGroupName": "payments-recovery",
+        "PolicyType": "TargetTrackingScaling",
+        "TargetTrackingConfiguration": {
+          "TargetValue": 60,
+          "PredefinedMetricSpecification": {
+            "PredefinedMetricType": "ASGAverageCPUUtilization"
+          }
+        }
+      }
+    },
+    {
+      "collectionId": "collection-24",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/payments/example1",
+      "nativeType": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "kind": "routing",
+      "parentId": null,
+      "configuration": {
+        "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/payments/example1",
+        "LoadBalancerName": "payments-recovery",
+        "Type": "application",
+        "Scheme": "internal",
+        "State": {
+          "Code": "active"
+        },
+        "VpcId": "vpc-example1",
+        "AvailabilityZones": [
+          {
+            "ZoneName": "eu-west-1a",
+            "SubnetId": "subnet-example1a"
+          },
+          {
+            "ZoneName": "eu-west-1b",
+            "SubnetId": "subnet-example1b"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-25",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/payments/example1",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "kind": "routing-pool",
+      "parentId": null,
+      "configuration": {
+        "TargetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/payments/example1",
+        "TargetGroupName": "payments-recovery",
+        "TargetType": "instance",
+        "Protocol": "HTTP",
+        "Port": 8080,
+        "VpcId": "vpc-example1",
+        "LoadBalancerArns": [
+          "arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/payments/example1"
+        ],
+        "HealthCheckProtocol": "HTTP",
+        "HealthCheckPort": "traffic-port",
+        "HealthCheckPath": "/ready",
+        "HealthCheckIntervalSeconds": 10,
+        "HealthCheckTimeoutSeconds": 5,
+        "HealthyThresholdCount": 2,
+        "UnhealthyThresholdCount": 3
+      }
+    },
+    {
+      "collectionId": "collection-26",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:rds:eu-west-1:111122223333:db:payments-1-0",
+      "nativeType": "AWS::RDS::DBInstance",
+      "kind": "database",
+      "parentId": null,
+      "configuration": {
+        "DBInstanceArn": "arn:aws:rds:eu-west-1:111122223333:db:payments-1-0",
+        "DBInstanceIdentifier": "payments-1-0",
+        "Engine": "aurora-postgresql",
+        "DBInstanceClass": "db.r7g.large",
+        "DBInstanceStatus": "available",
+        "MultiAZ": false,
+        "AvailabilityZone": "eu-west-1a",
+        "DBClusterIdentifier": "payments-1",
+        "BackupRetentionPeriod": 7,
+        "StorageEncrypted": true,
+        "PubliclyAccessible": false,
+        "DBSubnetGroup": {
+          "DBSubnetGroupName": "example-1",
+          "VpcId": "vpc-example1",
+          "Subnets": [
+            {
+              "SubnetIdentifier": "subnet-example1a"
+            },
+            {
+              "SubnetIdentifier": "subnet-example1b"
+            }
+          ]
+        },
+        "TagList": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-26",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:rds:eu-west-1:111122223333:db:payments-1-1",
+      "nativeType": "AWS::RDS::DBInstance",
+      "kind": "database",
+      "parentId": null,
+      "configuration": {
+        "DBInstanceArn": "arn:aws:rds:eu-west-1:111122223333:db:payments-1-1",
+        "DBInstanceIdentifier": "payments-1-1",
+        "Engine": "aurora-postgresql",
+        "DBInstanceClass": "db.r7g.large",
+        "DBInstanceStatus": "available",
+        "MultiAZ": false,
+        "AvailabilityZone": "eu-west-1b",
+        "DBClusterIdentifier": "payments-1",
+        "BackupRetentionPeriod": 7,
+        "StorageEncrypted": true,
+        "PubliclyAccessible": false,
+        "DBSubnetGroup": {
+          "DBSubnetGroupName": "example-1",
+          "VpcId": "vpc-example1",
+          "Subnets": [
+            {
+              "SubnetIdentifier": "subnet-example1a"
+            },
+            {
+              "SubnetIdentifier": "subnet-example1b"
+            }
+          ]
+        },
+        "TagList": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-27",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:rds:eu-west-1:111122223333:cluster:payments-1",
+      "nativeType": "AWS::RDS::DBCluster",
+      "kind": "database-cluster",
+      "parentId": null,
+      "configuration": {
+        "DBClusterArn": "arn:aws:rds:eu-west-1:111122223333:cluster:payments-1",
+        "DBClusterIdentifier": "payments-1",
+        "Engine": "aurora-postgresql",
+        "Status": "available",
+        "MultiAZ": true,
+        "AvailabilityZones": [
+          "eu-west-1a",
+          "eu-west-1b"
+        ],
+        "DBClusterMembers": [
+          {
+            "DBInstanceIdentifier": "payments-1-0",
+            "IsClusterWriter": true,
+            "PromotionTier": 0
+          },
+          {
+            "DBInstanceIdentifier": "payments-1-1",
+            "IsClusterWriter": false,
+            "PromotionTier": 1
+          }
+        ],
+        "GlobalClusterIdentifier": "payments-global",
+        "BackupRetentionPeriod": 7,
+        "StorageEncrypted": true,
+        "DBSubnetGroup": "example-1",
+        "TagList": [
+          {
+            "Key": "serviceId",
+            "Value": "DEMO-SERVICE-A"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-28",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:rds:eu-west-1:111122223333:subgrp:example-1",
+      "nativeType": "AWS::RDS::DBSubnetGroup",
+      "kind": "network-group",
+      "parentId": null,
+      "configuration": {
+        "DBSubnetGroupArn": "arn:aws:rds:eu-west-1:111122223333:subgrp:example-1",
+        "DBSubnetGroupName": "example-1",
+        "SubnetGroupStatus": "Complete",
+        "VpcId": "vpc-example1",
+        "Subnets": [
+          {
+            "SubnetIdentifier": "subnet-example1a",
+            "SubnetAvailabilityZone": {
+              "Name": "eu-west-1a"
+            },
+            "SubnetStatus": "Active"
+          },
+          {
+            "SubnetIdentifier": "subnet-example1b",
+            "SubnetAvailabilityZone": {
+              "Name": "eu-west-1b"
+            },
+            "SubnetStatus": "Active"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-29",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:listener/app/payments/example1/listener",
+      "nativeType": "AWS::ElasticLoadBalancingV2::Listener",
+      "kind": "routing-rule",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/payments/example1",
+      "configuration": {
+        "ListenerArn": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:listener/app/payments/example1/listener",
+        "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:loadbalancer/app/payments/example1",
+        "Protocol": "HTTPS",
+        "Port": 443,
+        "DefaultActions": [
+          {
+            "Type": "forward",
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/payments/example1"
+          }
+        ]
+      }
+    },
+    {
+      "collectionId": "collection-30",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/payments/example1#target/i-00000010/8080/",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetHealth",
+      "kind": "health-observation",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/payments/example1",
+      "configuration": {
+        "Target": {
+          "Id": "i-00000010",
+          "Port": 8080
+        },
+        "TargetHealth": {
+          "State": "healthy"
+        }
+      }
+    },
+    {
+      "collectionId": "collection-30",
+      "accountId": "111122223333",
+      "partition": "aws",
+      "region": "eu-west-1",
+      "observedAt": "2026-11-07T12:00:00.000Z",
+      "nativeId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/payments/example1#target/i-00000011/8080/",
+      "nativeType": "AWS::ElasticLoadBalancingV2::TargetHealth",
+      "kind": "health-observation",
+      "parentId": "arn:aws:elasticloadbalancing:eu-west-1:111122223333:targetgroup/payments/example1",
+      "configuration": {
+        "Target": {
+          "Id": "i-00000011",
+          "Port": 8080
+        },
+        "TargetHealth": {
+          "State": "healthy"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Synthetic service fixture; no AWS account was queried.",
+    "Only selected EC2, Auto Scaling, ELBv2, RDS and regional tagging APIs are collected; other services and global routing are not covered.",
+    "Tagging API does not return all untagged or unsupported resources; explicit service APIs supplement it.",
+    "Configuration observations are not an atomic snapshot and do not establish workload paths, measured transaction capacity or recovery guarantees.",
+    "Launch-template versions/user data, scaling schedules, warm pools, listener non-default rules, IAM policies and network reachability are not collected."
+  ],
+  "synthetic": true
+}
