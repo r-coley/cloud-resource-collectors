@@ -1,0 +1,189 @@
+{
+  "microsoft.compute/virtualmachines": {
+    "kind": "compute",
+    "fields": [
+      "properties.hardwareProfile.vmSize",
+      "properties.priority",
+      "properties.availabilitySet.id",
+      "properties.capacityReservation.capacityReservationGroup.id"
+    ]
+  },
+  "microsoft.compute/virtualmachinescalesets": {
+    "kind": "compute-group",
+    "fields": [
+      "sku.capacity",
+      "sku.name",
+      "properties.zoneBalance",
+      "properties.orchestrationMode",
+      "properties.automaticRepairsPolicy.enabled",
+      "properties.automaticRepairsPolicy.gracePeriod",
+      "properties.automaticRepairsPolicy.repairAction",
+      "properties.virtualMachineProfile.priority",
+      "properties.virtualMachineProfile.capacityReservation.capacityReservationGroup.id",
+      "properties.virtualMachineProfile.networkProfile.healthProbe.id"
+    ]
+  },
+  "microsoft.insights/autoscalesettings": {
+    "kind": "scaling-policy",
+    "fields": [
+      "properties.enabled",
+      "properties.targetResourceUri",
+      "properties.profiles"
+    ]
+  },
+  "microsoft.network/loadbalancers": {
+    "kind": "routing",
+    "fields": [
+      "sku.name",
+      "properties.probes",
+      "properties.loadBalancingRules",
+      "properties.backendAddressPools",
+      "properties.frontendIPConfigurations"
+    ]
+  },
+  "microsoft.network/applicationgateways": {
+    "kind": "routing",
+    "fields": [
+      "properties.sku",
+      "properties.autoscaleConfiguration",
+      "properties.probes",
+      "properties.backendAddressPools",
+      "properties.requestRoutingRules"
+    ]
+  },
+  "microsoft.network/trafficmanagerprofiles": {
+    "kind": "routing",
+    "fields": [
+      "properties.trafficRoutingMethod",
+      "properties.monitorConfig",
+      "properties.endpoints"
+    ]
+  },
+  "microsoft.cdn/profiles": {
+    "kind": "routing",
+    "fields": [
+      "sku.name"
+    ]
+  },
+  "microsoft.cdn/profiles/origingroups": {
+    "kind": "routing",
+    "fields": [
+      "properties.healthProbeSettings",
+      "properties.loadBalancingSettings"
+    ]
+  },
+  "microsoft.sql/servers": {
+    "kind": "data-host",
+    "fields": [
+      "properties.state"
+    ]
+  },
+  "microsoft.sql/servers/databases": {
+    "kind": "database",
+    "fields": [
+      "sku",
+      "properties.zoneRedundant",
+      "properties.currentServiceObjectiveName",
+      "properties.readScale",
+      "properties.requestedBackupStorageRedundancy",
+      "properties.currentBackupStorageRedundancy"
+    ]
+  },
+  "microsoft.sql/servers/failovergroups": {
+    "kind": "replication-policy",
+    "fields": [
+      "properties.replicationRole",
+      "properties.replicationState",
+      "properties.partnerServers",
+      "properties.databases",
+      "properties.readWriteEndpoint",
+      "properties.readOnlyEndpoint"
+    ]
+  },
+  "microsoft.sql/servers/databases/backupshorttermretentionpolicies": {
+    "kind": "backup-policy",
+    "fields": [
+      "properties.retentionDays",
+      "properties.diffBackupIntervalInHours"
+    ]
+  },
+  "microsoft.sql/servers/databases/backuplongtermretentionpolicies": {
+    "kind": "backup-policy",
+    "fields": [
+      "properties.weeklyRetention",
+      "properties.monthlyRetention",
+      "properties.yearlyRetention"
+    ]
+  },
+  "microsoft.compute/capacityreservationgroups": {
+    "kind": "allocation-reservation",
+    "fields": [
+      "properties.capacityReservations",
+      "properties.virtualMachinesAssociated"
+    ]
+  },
+  "microsoft.compute/capacityreservationgroups/capacityreservations": {
+    "kind": "allocation-reservation",
+    "fields": [
+      "sku",
+      "properties.provisioningState",
+      "properties.reservationId"
+    ]
+  },
+  "microsoft.network/networkinterfaces": {
+    "kind": "network",
+    "fields": [
+      "properties.ipConfigurations"
+    ]
+  },
+  "microsoft.network/virtualnetworks": {
+    "kind": "network",
+    "fields": [
+      "properties.subnets",
+      "properties.virtualNetworkPeerings"
+    ]
+  },
+  "microsoft.keyvault/vaults": {
+    "kind": "key-management",
+    "fields": [
+      "properties.enableSoftDelete",
+      "properties.enablePurgeProtection"
+    ]
+  },
+  "microsoft.storage/storageaccounts": {
+    "kind": "storage",
+    "fields": [
+      "sku.name",
+      "properties.allowCrossTenantReplication",
+      "properties.geoReplicationStats"
+    ]
+  },
+  "microsoft.containerservice/managedclusters": {
+    "kind": "container-platform",
+    "fields": [
+      "properties.agentPoolProfiles",
+      "properties.autoScalerProfile"
+    ]
+  },
+  "microsoft.web/serverfarms": {
+    "kind": "compute-group",
+    "fields": [
+      "sku",
+      "properties.zoneRedundant",
+      "properties.maximumElasticWorkerCount"
+    ]
+  },
+  "microsoft.web/sites": {
+    "kind": "application-host",
+    "fields": [
+      "properties.serverFarmId",
+      "properties.siteConfig.healthCheckPath"
+    ]
+  },
+  "microsoft.recoveryservices/vaults": {
+    "kind": "backup-vault",
+    "fields": [
+      "properties.provisioningState"
+    ]
+  }
+}

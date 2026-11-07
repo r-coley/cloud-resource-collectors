@@ -1,0 +1,396 @@
+{
+  "specs": [
+    {
+      "id": "assets",
+      "host": "cloudasset.googleapis.com",
+      "path": "v1/projects/{number}/assets",
+      "result": "assets",
+      "asset": true,
+      "query": {
+        "contentType": "RESOURCE",
+        "pageSize": "500"
+      }
+    },
+    {
+      "id": "instances",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/aggregated/instances",
+      "result": "instances",
+      "aggregated": true,
+      "type": "compute.googleapis.com/Instance",
+      "kind": "compute",
+      "query": {
+        "maxResults": "500",
+        "returnPartialSuccess": "true"
+      }
+    },
+    {
+      "id": "instanceGroupManagers",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/aggregated/instanceGroupManagers",
+      "result": "instanceGroupManagers",
+      "aggregated": true,
+      "type": "compute.googleapis.com/InstanceGroupManager",
+      "kind": "compute-group",
+      "query": {
+        "maxResults": "500",
+        "returnPartialSuccess": "true"
+      }
+    },
+    {
+      "id": "instanceGroups",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/aggregated/instanceGroups",
+      "result": "instanceGroups",
+      "aggregated": true,
+      "type": "compute.googleapis.com/InstanceGroup",
+      "kind": "compute-group-membership",
+      "query": {
+        "maxResults": "500",
+        "returnPartialSuccess": "true"
+      }
+    },
+    {
+      "id": "autoscalers",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/aggregated/autoscalers",
+      "result": "autoscalers",
+      "aggregated": true,
+      "type": "compute.googleapis.com/Autoscaler",
+      "kind": "scaling-policy",
+      "query": {
+        "maxResults": "500",
+        "returnPartialSuccess": "true"
+      }
+    },
+    {
+      "id": "backendServices",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/aggregated/backendServices",
+      "result": "backendServices",
+      "aggregated": true,
+      "type": "compute.googleapis.com/BackendService",
+      "kind": "routing-pool",
+      "query": {
+        "maxResults": "500",
+        "returnPartialSuccess": "true"
+      }
+    },
+    {
+      "id": "forwardingRules",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/aggregated/forwardingRules",
+      "result": "forwardingRules",
+      "aggregated": true,
+      "type": "compute.googleapis.com/ForwardingRule",
+      "kind": "routing",
+      "query": {
+        "maxResults": "500",
+        "returnPartialSuccess": "true"
+      }
+    },
+    {
+      "id": "subnetworks",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/aggregated/subnetworks",
+      "result": "subnetworks",
+      "aggregated": true,
+      "type": "compute.googleapis.com/Subnetwork",
+      "kind": "network",
+      "query": {
+        "maxResults": "500",
+        "returnPartialSuccess": "true"
+      }
+    },
+    {
+      "id": "reservations",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/aggregated/reservations",
+      "result": "reservations",
+      "aggregated": true,
+      "type": "compute.googleapis.com/Reservation",
+      "kind": "allocation-reservation",
+      "query": {
+        "maxResults": "500",
+        "returnPartialSuccess": "true"
+      }
+    },
+    {
+      "id": "networks",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/global/networks",
+      "result": "items",
+      "type": "compute.googleapis.com/Network",
+      "kind": "network",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "instanceTemplates",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/global/instanceTemplates",
+      "result": "items",
+      "type": "compute.googleapis.com/InstanceTemplate",
+      "kind": "compute-template",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "globalForwardingRules",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/global/forwardingRules",
+      "result": "items",
+      "type": "compute.googleapis.com/ForwardingRule",
+      "kind": "routing",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "healthChecks",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/global/healthChecks",
+      "result": "items",
+      "type": "compute.googleapis.com/HealthCheck",
+      "kind": "health-check",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "urlMaps",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/global/urlMaps",
+      "result": "items",
+      "type": "compute.googleapis.com/UrlMap",
+      "kind": "routing-rule",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "targetHttpProxies",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/global/targetHttpProxies",
+      "result": "items",
+      "type": "compute.googleapis.com/TargetHttpProxy",
+      "kind": "routing-rule",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "targetHttpsProxies",
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/global/targetHttpsProxies",
+      "result": "items",
+      "type": "compute.googleapis.com/TargetHttpsProxy",
+      "kind": "routing-rule",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "regional-healthChecks",
+      "regional": true,
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/regions/{region}/healthChecks",
+      "result": "items",
+      "type": "compute.googleapis.com/HealthCheck",
+      "kind": "health-check",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "regional-urlMaps",
+      "regional": true,
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/regions/{region}/urlMaps",
+      "result": "items",
+      "type": "compute.googleapis.com/UrlMap",
+      "kind": "routing-rule",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "regional-targetHttpProxies",
+      "regional": true,
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/regions/{region}/targetHttpProxies",
+      "result": "items",
+      "type": "compute.googleapis.com/TargetHttpProxy",
+      "kind": "routing-rule",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "regional-targetHttpsProxies",
+      "regional": true,
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/regions/{region}/targetHttpsProxies",
+      "result": "items",
+      "type": "compute.googleapis.com/TargetHttpsProxy",
+      "kind": "routing-rule",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "regional-instanceTemplates",
+      "regional": true,
+      "host": "compute.googleapis.com",
+      "path": "compute/v1/projects/{project}/regions/{region}/instanceTemplates",
+      "result": "items",
+      "type": "compute.googleapis.com/InstanceTemplate",
+      "kind": "compute-template",
+      "query": {
+        "maxResults": "500"
+      }
+    },
+    {
+      "id": "sql-instances",
+      "host": "sqladmin.googleapis.com",
+      "path": "v1/projects/{project}/instances",
+      "result": "items",
+      "type": "sqladmin.googleapis.com/Instance",
+      "kind": "database",
+      "query": {
+        "maxResults": "500"
+      }
+    }
+  ],
+  "fields": {
+    "compute.googleapis.com/Instance": [
+      "status",
+      "zone",
+      "machineType",
+      "scheduling",
+      "reservationAffinity",
+      "networkInterfaces",
+      "disks",
+      "deletionProtection"
+    ],
+    "compute.googleapis.com/InstanceGroupManager": [
+      "targetSize",
+      "listManagedInstancesResults",
+      "instanceTemplate",
+      "versions",
+      "instanceGroup",
+      "distributionPolicy",
+      "autoHealingPolicies",
+      "updatePolicy",
+      "statefulPolicy",
+      "status"
+    ],
+    "compute.googleapis.com/InstanceGroup": [
+      "size",
+      "zone",
+      "network",
+      "subnetwork",
+      "namedPorts"
+    ],
+    "compute.googleapis.com/Autoscaler": [
+      "target",
+      "autoscalingPolicy",
+      "status"
+    ],
+    "compute.googleapis.com/BackendService": [
+      "protocol",
+      "loadBalancingScheme",
+      "backends",
+      "healthChecks",
+      "timeoutSec",
+      "connectionDraining",
+      "failoverPolicy"
+    ],
+    "compute.googleapis.com/ForwardingRule": [
+      "target",
+      "backendService",
+      "network",
+      "subnetwork",
+      "loadBalancingScheme",
+      "region",
+      "IPProtocol",
+      "portRange",
+      "ports"
+    ],
+    "compute.googleapis.com/HealthCheck": [
+      "type",
+      "checkIntervalSec",
+      "timeoutSec",
+      "healthyThreshold",
+      "unhealthyThreshold",
+      "httpHealthCheck",
+      "httpsHealthCheck",
+      "tcpHealthCheck"
+    ],
+    "compute.googleapis.com/UrlMap": [
+      "defaultService",
+      "hostRules",
+      "pathMatchers",
+      "routeRules"
+    ],
+    "compute.googleapis.com/TargetHttpProxy": [
+      "urlMap"
+    ],
+    "compute.googleapis.com/TargetHttpsProxy": [
+      "urlMap",
+      "sslPolicy"
+    ],
+    "compute.googleapis.com/Subnetwork": [
+      "region",
+      "network",
+      "ipCidrRange",
+      "purpose",
+      "privateIpGoogleAccess"
+    ],
+    "compute.googleapis.com/Network": [
+      "autoCreateSubnetworks",
+      "subnetworks",
+      "routingConfig"
+    ],
+    "compute.googleapis.com/Reservation": [
+      "zone",
+      "status",
+      "specificReservation",
+      "specificReservationRequired",
+      "shareSettings"
+    ],
+    "compute.googleapis.com/InstanceTemplate": [
+      "properties.machineType",
+      "properties.scheduling",
+      "properties.reservationAffinity",
+      "properties.networkInterfaces"
+    ],
+    "sqladmin.googleapis.com/Instance": [
+      "state",
+      "region",
+      "gceZone",
+      "secondaryGceZone",
+      "databaseVersion",
+      "instanceType",
+      "masterInstanceName",
+      "replicaNames",
+      "failoverReplica",
+      "settings.tier",
+      "settings.availabilityType",
+      "settings.backupConfiguration",
+      "settings.ipConfiguration",
+      "settings.activationPolicy",
+      "replicationType",
+      "diskEncryptionConfiguration"
+    ],
+    "collector.gcp/ManagedInstanceObservation": [
+      "instance",
+      "instanceStatus",
+      "currentAction",
+      "instanceHealth",
+      "version"
+    ]
+  }
+}

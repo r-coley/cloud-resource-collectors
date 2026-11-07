@@ -7,15 +7,15 @@ does not need a running database.
 
 ## Start a local database
 
-Requires Node.js 22+, the repository dependencies, and either Docker Compose v2 or
+Requires Python 3.11+, the repository package, and either Docker Compose v2 or
 an existing Neo4j 5.26+ installation. The included Compose file starts Neo4j Community
 with its default `neo4j` database and a persistent data volume, listening on localhost.
 
 From the repository root:
 
 ```sh
-npm ci
-npm run demo
+python -m pip install .
+cloud-demo
 export NEO4J_PASSWORD='choose-your-local-password'
 docker compose -f graph/compose.yaml up -d --wait
 ```
@@ -41,14 +41,14 @@ Compose creates the local default database; `init` creates the graph constraints
 ## Import collected JSON
 
 ```sh
-node bin/cloud-graph.js init
-node bin/cloud-graph.js import \
+cloud-graph init
+cloud-graph import \
   --input runs/demo/azure/cloud-inventory.json \
   --input runs/demo/aws/cloud-inventory.json \
   --input runs/demo/gcp/cloud-inventory.json
 ```
 
-Use the same command with the JSON files written by `bin/cloud-collect.js` for live
+Use the same command with the JSON files written by `cloud-collect` for live
 projects. It does not call cloud APIs. Each import reports `imported` or
 `already-imported`. Repeat `--input` for additional files, up to 256 MiB per file.
 
@@ -65,8 +65,8 @@ database avoids mixing this model with unrelated application graphs.
 ## Query projects
 
 ```sh
-node bin/cloud-graph.js projects
-node bin/cloud-graph.js projects --cloud gcp --limit 5000
+cloud-graph projects
+cloud-graph projects --cloud gcp --limit 5000
 ```
 
 Each row identifies a project/scope observation, snapshot ID, collection time, origin,
@@ -77,8 +77,8 @@ selection recorded separately. Synthetic examples are explicitly labelled.
 Copy a project ID or the full `project` scope ID from that output:
 
 ```sh
-node bin/cloud-graph.js resources --project YOUR_PROJECT_ID
-node bin/cloud-graph.js resilience --project YOUR_PROJECT_ID
+cloud-graph resources --project YOUR_PROJECT_ID
+cloud-graph resilience --project YOUR_PROJECT_ID
 ```
 
 Use `--cloud` to disambiguate cloud IDs. By default, the utility selects the latest
@@ -87,9 +87,9 @@ selectors or origins, it requires an explicit `--snapshot` instead of guessing w
 scope or synthetic/live dataset you intended.
 
 ```sh
-node bin/cloud-graph.js resilience \
+cloud-graph resilience \
   --project YOUR_PROJECT_ID --snapshot YOUR_IMPORTED_SNAPSHOT_ID
-node bin/cloud-graph.js resources \
+cloud-graph resources \
   --project YOUR_PROJECT_ID --snapshot YOUR_IMPORTED_SNAPSHOT_ID --kind database
 ```
 
@@ -117,7 +117,7 @@ This first utility exposes evidence; it is not yet the pattern assessment/simula
 ## Inspect supporting evidence
 
 ```sh
-node bin/cloud-graph.js evidence \
+cloud-graph evidence \
   --snapshot YOUR_IMPORTED_SNAPSHOT_ID --evidence-id evidence-0
 ```
 
@@ -173,7 +173,7 @@ resource state assembled from different scans.
 ## Test and stop
 
 ```sh
-npm test
+python -m pytest
 docker compose -f graph/compose.yaml stop
 ```
 
@@ -183,13 +183,13 @@ conflicts, historical/partial snapshots and transaction rollback. To run those t
 locally against a dedicated test database:
 
 ```sh
-export NEO4J_TEST_URI='bolt://127.0.0.1:7687'
-export NEO4J_TEST_PASSWORD="$NEO4J_PASSWORD"
-node --test tests/graph-neo4j.test.js
+export NEO4J_TEST=1
+python -m pytest python_tests/test_neo4j_integration.py
 ```
 
-The integration test inserts synthetic snapshots; use a test database. It does not
+The integration test clears InventoryEntity nodes and inserts synthetic snapshots;
+use a disposable test database only. It does not
 query real cloud projects. `stop` retains the local data volume for the next run.
 
-Official implementation references: [Neo4j driver transactions](https://neo4j.com/docs/javascript-manual/current/transactions/)
+Official implementation references: [Neo4j driver transactions](https://neo4j.com/docs/python-manual/current/transactions/)
 and [property uniqueness constraints](https://neo4j.com/docs/cypher-manual/current/schema/constraints/create-constraints/).

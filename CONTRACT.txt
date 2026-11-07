@@ -10,9 +10,9 @@ been verified.
 Files
 cloud-inventory.schema.json: strict JSON Schema draft-07 structural contract.
 examples/{azure,aws,gcp}-service.cloud-inventory.json: synthetic service examples.
-src/cloud-inventory.js: adapter from existing Azure estate output.
-The Azure CLI writes cloud-inventory.json alongside existing outputs so the
-current report and service files continue to work.
+python/cloud_resource_collectors/normalise.py: provider normalization.
+The cloud-collect command writes one neutral JSON snapshot for downstream consumers.
+The Python package bundles the same schema; tests keep the two copies identical.
 
 Envelope
 schemaVersion: cloud-inventory/1.0.0. Consumers reject unsupported major versions.
@@ -102,7 +102,7 @@ validation before writing exports. All three fixtures exercise that validator.
 Live integration verification remains to be done.
 
 Standalone project interface
-The unified bin/cloud-collect.js interface exports every observed resource in the
+The unified cloud-collect interface exports every observed resource in the
 requested scopes, including untagged resources and observed scope containers.
 Service memberships are optional annotations and do not determine resource inclusion.
 Resource-to-scope links enable project queries even without a service catalogue.

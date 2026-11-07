@@ -1,70 +1,34 @@
-AWS service service discovery — initial connector
+AWS resource collection — Python 0.3
 
-Purpose
-Collect selected AWS configuration once per explicitly configured account/region,
-then group observations by an exact, case-sensitive serviceId tag. Output uses the
-same cloud-inventory/1.0.0 contract as Azure. No Fix Inventory, Cartography or graph
-platform dependency is introduced. This connector was built with our own code.
+Install
+Python 3.11+; follow README.md for virtual environment and pip installation.
 
-Try the synthetic example (no AWS CLI, credentials or cloud calls)
-Requires Node.js 22+ and the existing validator dependency installed with:
-  npm ci
-From the project root, use a new output directory:
+Offline example (no cloud credentials or network)
+cloud-collect --cloud aws --config examples/aws-service.config.json \
+  --inventory examples/aws-service.inventory.json --output runs/aws-offline.json
+cloud-demo also writes synthetic JSON and HTML reports under runs/demo/.
 
-node aws-discover.js \
-  --config examples/aws-service.config.json \
-  --inventory examples/aws-service.inventory.json \
-  --output /tmp/aws-service-discovery
+Live collection
+Uses Boto3's credential chain. Configure existing read-only profiles (including
+SSO or assume-role profiles), environment credentials or workload credentials.
+--profile selects an existing profile. STS verifies every requested account and
+partition before resource queries. It does not create roles or authenticate for you.
+Regions are explicit. aws, aws-us-gov and aws-cn are supported configuration
+partitions; sovereign endpoints have not been live tested.
 
-Open /tmp/aws-service-report.html. The example has DEMO-SERVICE-A across
-London and Ireland, eight EC2 observations in Auto Scaling groups with desired
-counts 6/2, regional load balancers/probes, Aurora cluster members and a global
-cluster, subnets and capacity reservation configuration. DEMO-SERVICE-B deliberately
-contains an unsupported tagged Lambda function, and DEMO-SERVICE-C has no visible
-resources. Neither counts nor database classes imply transaction throughput.
-The global cluster's reported writer flags are evidence, not an assumed regional
-failover policy or proof of zero data loss.
-After running npm run demo, the example is also available at:
-runs/demo/aws/report.html
+Copy examples/aws-service.config.json to a *.local.json file and replace the
+synthetic project scopes and credentials/profile references before collecting:
+cloud-collect --cloud aws --config scopes.local.json --output runs/aws-resources.json
 
-Live collection (not exercised in development)
-Requires AWS CLI v2 already authenticated. Configure one existing profile per
-account, for example an AWS IAM Identity Center/SSO or assume-role profile. The
-connector does not log in, create roles or modify cloud resources. It uses the
-CLI's existing credential chain if profile is omitted. It verifies STS account ID
-and partition for ALL requested accounts before starting resource collection.
-A mismatch or failed authentication aborts the run without resource queries.
+Output is one cloud-inventory/1.0.0 JSON document, including all observed resources
+in scope, optional service memberships, facts, relationships, source evidence and
+collection coverage. Existing files are never overwritten. Files use owner-only
+permissions; runs/ and *.local.json are excluded from Git. Known sensitive fields
+are filtered, but exports can still contain confidential configuration.
 
-Copy aws-service.config.json to aws-service.local.json, replace the
-synthetic account ID, profile, explicit regions and catalogue. The example account
-ID is deliberately synthetic. Do not run it unchanged against a real account.
-
-mkdir -p runs
-node aws-discover.js \
-  --config aws-service.local.json \
-  --output runs/NEW_AWS_RUN
-
-The output directory must not already exist. No automatic organization/account or
-region enumeration occurs. Accounts in aws, aws-us-gov and aws-cn partitions are
-accepted with matching region prefixes; sovereign partitions have not been live
-tested. There is no custom API endpoint option or credential field in the config.
-
-Outputs
-- cloud-inventory.json: cloud-neutral estate snapshot, source evidence and coverage.
-- services/00001.json etc.: schema-valid per-service neutral snapshots, filtered to
-  that service's resources/evidence; shared collection metadata remains present.
-- aws-inventory.json: filtered AWS observations for reproducible offline processing.
-- report.html: standalone local review of services, observed facts and query gaps.
-Generated files/directories use owner-only permissions and new run directories.
-Runs and *.local.json are excluded from Git. Known sensitive configuration keys
-are filtered, but arbitrary tags/configuration may still be confidential. No secret
-values, user data, application traffic or customer service data APIs are queried.
-
-Exit status
-0: selected API queries completed, permissions still unverified.
-2: missing/denied/incomplete query coverage, outputs retained for review.
-1: invalid config/input, identity mismatch, validation or output failure.
-Success never means the whole AWS estate was visible or that protection is proven.
+Exit 0 = selected queries complete (visibility unverified); 2 = partial JSON saved;
+1 = configuration, credentials, scope, validation or output error. No query success
+establishes tested resilience. Live provider integration has not yet been verified.
 
 First resource/API coverage
 EC2: instances, subnets, VPCs, capacity reservations, launch-template metadata.
@@ -76,9 +40,8 @@ tiers and configured backups/restorable times where supplied by these APIs.
 Tagging: GetResources provides tags and unsupported-resource placeholders. Service
 APIs collect untagged dependencies; GetResources alone never gives full inventory.
 Global RDS clusters are requested through the account's first configured region.
-All APIs use the official CLI, fixed read operations, argument arrays rather than a
-shell, automatic CLI pagination disabled, and explicit native NextToken/Marker/
-PaginationToken handling. Each request has time/output bounds; transient errors
+All APIs use Boto3 with fixed read operations and explicit native NextToken/Marker/
+PaginationToken handling. Each request has network timeouts; transient errors
 have at most four attempts. Repeated tokens and a 1000-page ceiling mark queries
 partial. Calls are sequential in this first version, limiting pressure on APIs.
 Full account-region scans are shared by services; there is no scan per service.
@@ -108,19 +71,10 @@ Tagged unsupported resources are retained, but unsupported untagged resources ma
 be invisible. A complete selected API scan is never a complete cloud inventory.
 Database failover behaviour, client reconnection, successful restore tests, quota
 headroom, usable reserved capacity and workload demand require further evidence.
-No snapshot is automatically simulation-ready. Graph import remains a separate task.
+No snapshot is automatically simulation-ready. Graph import is a separate command in this repository.
+
 
 Verification
-npm test
-Tests use injected AWS API responses and synthetic data: pagination over 1000
-instances and all token dialects, scope/identity rejection, throttling, denied APIs,
-missing detail coverage, graph/evidence validation, source filtering, case-sensitive
-service tagging and ARN identity, cross-region relationships, HTML escaping and
-CLI estate/per-service export. No live AWS account has been scanned.
-
-Official references reviewed 7 November 2026
-https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-auto-scaling-groups.html
-https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-clusters.html
-https://docs.aws.amazon.com/cli/latest/reference/resourcegroupstaggingapi/get-resources.html
-https://docs.aws.amazon.com/cli/latest/reference/elbv2/describe-target-groups.html
-https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html
+python -m pytest
+Offline fixtures, injected API responses and SDK request-shape checks are tested.
+No live cloud project is queried by the tests. Neo4j integration runs in CI.

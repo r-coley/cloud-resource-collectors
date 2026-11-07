@@ -1,0 +1,5 @@
+include cloud-inventory.schema.json requirements-dev.lock.txt
+include *-README.txt CONTRACT.txt PROVENANCE.md
+recursive-include examples *.json
+recursive-include graph *.md *.yaml *.cypher
+recursive-include python_tests *.py *.json

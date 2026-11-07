@@ -1,0 +1,537 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/r-coley/cloud-resource-collectors/main/cloud-inventory.schema.json",
+  "title": "Cloud inventory snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "cloud-inventory/1.0.0"
+    },
+    "snapshotId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origin": {
+      "enum": [
+        "live",
+        "synthetic",
+        "provided"
+      ]
+    },
+    "collector": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "name",
+        "version"
+      ]
+    },
+    "startedAt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "finishedAt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scopes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/scope"
+      }
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/collection"
+      }
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/service"
+      }
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/resource"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "simulationReady": {
+      "const": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "snapshotId",
+    "origin",
+    "collector",
+    "startedAt",
+    "finishedAt",
+    "scopes",
+    "collections",
+    "services",
+    "resources",
+    "relationships",
+    "evidence",
+    "limitations",
+    "simulationReady"
+  ],
+  "$defs": {
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provider": {
+          "enum": [
+            "aws",
+            "azure",
+            "gcp"
+          ]
+        },
+        "partition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accountId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tenantId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "selector": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "provider",
+        "partition",
+        "accountId",
+        "tenantId",
+        "selector"
+      ]
+    },
+    "collection": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scopeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "collected",
+            "partial",
+            "denied",
+            "failed",
+            "unsupported"
+          ]
+        },
+        "paginationComplete": {
+          "type": "boolean"
+        },
+        "permissionCoverage": {
+          "enum": [
+            "verified",
+            "unverified",
+            "partial"
+          ]
+        },
+        "startedAt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "finishedAt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recordCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "errorCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "scopeId",
+        "source",
+        "status",
+        "paginationComplete",
+        "permissionCoverage",
+        "startedAt",
+        "finishedAt",
+        "recordCount",
+        "errorCode"
+      ]
+    },
+    "service": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "catalogueStatus": {
+          "enum": [
+            "catalogued",
+            "not-in-catalogue",
+            "catalogue-not-supplied"
+          ]
+        },
+        "memberships": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "resourceKey": {
+                "type": "string",
+                "minLength": 1
+              },
+              "role": {
+                "enum": [
+                  "owned",
+                  "shared-or-untagged-dependency",
+                  "external-service-dependency"
+                ]
+              }
+            },
+            "required": [
+              "resourceKey",
+              "role"
+            ]
+          }
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string",
+                "minLength": 1
+              },
+              "message": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "code",
+              "message"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "catalogueStatus",
+        "memberships",
+        "gaps"
+      ]
+    },
+    "resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scopeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nativeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nativeType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "zones": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "placementMeaning": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "facts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fact"
+          }
+        },
+        "evidenceIds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "key",
+        "scopeId",
+        "nativeId",
+        "nativeType",
+        "kind",
+        "name",
+        "region",
+        "zones",
+        "placementMeaning",
+        "tags",
+        "facts",
+        "evidenceIds"
+      ]
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "unknown"
+          ]
+        },
+        "value": {},
+        "evidenceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourcePointer": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "name",
+        "status",
+        "value",
+        "evidenceId",
+        "sourcePointer"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "unknown"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "value": {
+                "not": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "from": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "nativeId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "resourceKey": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "resolution": {
+              "enum": [
+                "exact-resource",
+                "resource-ancestor-only",
+                "unresolved"
+              ]
+            }
+          },
+          "required": [
+            "nativeId",
+            "resourceKey",
+            "resolution"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "configuration-reference",
+            "contained-by"
+          ]
+        },
+        "assertion": {
+          "const": "declared"
+        },
+        "evidenceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourcePointer": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "from",
+        "target",
+        "kind",
+        "assertion",
+        "evidenceId",
+        "sourcePointer"
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "collectionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observedAt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "redaction": {
+          "const": "collector-filtered-not-guaranteed-secret-free"
+        },
+        "record": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "collectionId",
+        "observedAt",
+        "redaction",
+        "record"
+      ]
+    }
+  }
+}

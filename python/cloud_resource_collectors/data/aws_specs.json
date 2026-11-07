@@ -1,0 +1,312 @@
+{
+  "specs": [
+    {
+      "service": "resourcegroupstaggingapi",
+      "operation": "get-resources",
+      "result": "ResourceTagMappingList",
+      "token": "PaginationToken",
+      "kind": "uninterpreted",
+      "type": "tagged-resource",
+      "id": "ResourceARN"
+    },
+    {
+      "service": "ec2",
+      "operation": "describe-instances",
+      "result": "Reservations",
+      "flatten": "Instances",
+      "token": "NextToken",
+      "kind": "compute",
+      "type": "AWS::EC2::Instance",
+      "id": "InstanceId",
+      "arn": "instance"
+    },
+    {
+      "service": "ec2",
+      "operation": "describe-subnets",
+      "result": "Subnets",
+      "token": "NextToken",
+      "kind": "network",
+      "type": "AWS::EC2::Subnet",
+      "id": "SubnetId",
+      "arn": "subnet"
+    },
+    {
+      "service": "ec2",
+      "operation": "describe-vpcs",
+      "result": "Vpcs",
+      "token": "NextToken",
+      "kind": "network",
+      "type": "AWS::EC2::VPC",
+      "id": "VpcId",
+      "arn": "vpc"
+    },
+    {
+      "service": "ec2",
+      "operation": "describe-capacity-reservations",
+      "result": "CapacityReservations",
+      "token": "NextToken",
+      "kind": "allocation-reservation",
+      "type": "AWS::EC2::CapacityReservation",
+      "id": "CapacityReservationId",
+      "arn": "capacity-reservation"
+    },
+    {
+      "service": "ec2",
+      "operation": "describe-launch-templates",
+      "result": "LaunchTemplates",
+      "token": "NextToken",
+      "kind": "compute-template",
+      "type": "AWS::EC2::LaunchTemplate",
+      "id": "LaunchTemplateId",
+      "arn": "launch-template"
+    },
+    {
+      "service": "autoscaling",
+      "operation": "describe-auto-scaling-groups",
+      "result": "AutoScalingGroups",
+      "token": "NextToken",
+      "kind": "compute-group",
+      "type": "AWS::AutoScaling::AutoScalingGroup",
+      "id": "AutoScalingGroupARN"
+    },
+    {
+      "service": "autoscaling",
+      "operation": "describe-policies",
+      "result": "ScalingPolicies",
+      "token": "NextToken",
+      "kind": "scaling-policy",
+      "type": "AWS::AutoScaling::ScalingPolicy",
+      "id": "PolicyARN"
+    },
+    {
+      "service": "elbv2",
+      "operation": "describe-load-balancers",
+      "result": "LoadBalancers",
+      "token": "Marker",
+      "outToken": "NextMarker",
+      "kind": "routing",
+      "type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "id": "LoadBalancerArn"
+    },
+    {
+      "service": "elbv2",
+      "operation": "describe-target-groups",
+      "result": "TargetGroups",
+      "token": "Marker",
+      "outToken": "NextMarker",
+      "kind": "routing-pool",
+      "type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "id": "TargetGroupArn"
+    },
+    {
+      "service": "rds",
+      "operation": "describe-db-instances",
+      "result": "DBInstances",
+      "token": "Marker",
+      "kind": "database",
+      "type": "AWS::RDS::DBInstance",
+      "id": "DBInstanceArn"
+    },
+    {
+      "service": "rds",
+      "operation": "describe-db-clusters",
+      "result": "DBClusters",
+      "token": "Marker",
+      "kind": "database-cluster",
+      "type": "AWS::RDS::DBCluster",
+      "id": "DBClusterArn"
+    },
+    {
+      "service": "rds",
+      "operation": "describe-db-subnet-groups",
+      "result": "DBSubnetGroups",
+      "token": "Marker",
+      "kind": "network-group",
+      "type": "AWS::RDS::DBSubnetGroup",
+      "id": "DBSubnetGroupArn"
+    },
+    {
+      "service": "rds",
+      "operation": "describe-global-clusters",
+      "result": "GlobalClusters",
+      "token": "Marker",
+      "kind": "replication-policy",
+      "type": "AWS::RDS::GlobalCluster",
+      "id": "GlobalClusterArn",
+      "once": true
+    }
+  ],
+  "details": [
+    {
+      "parent": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "service": "elbv2",
+      "operation": "describe-listeners",
+      "result": "Listeners",
+      "token": "Marker",
+      "outToken": "NextMarker",
+      "parameter": "LoadBalancerArn",
+      "id": "ListenerArn",
+      "type": "AWS::ElasticLoadBalancingV2::Listener",
+      "kind": "routing-rule"
+    },
+    {
+      "parent": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "service": "elbv2",
+      "operation": "describe-target-health",
+      "result": "TargetHealthDescriptions",
+      "parameter": "TargetGroupArn",
+      "type": "AWS::ElasticLoadBalancingV2::TargetHealth",
+      "kind": "health-observation"
+    }
+  ],
+  "fields": {
+    "AWS::EC2::Instance": [
+      "InstanceType",
+      "State.Name",
+      "Placement.AvailabilityZone",
+      "Placement.AvailabilityZoneId",
+      "InstanceLifecycle",
+      "CapacityReservationId",
+      "CapacityReservationSpecification",
+      "SubnetId",
+      "VpcId",
+      "SecurityGroups",
+      "LaunchTemplate"
+    ],
+    "AWS::AutoScaling::AutoScalingGroup": [
+      "MinSize",
+      "MaxSize",
+      "DesiredCapacity",
+      "DesiredCapacityType",
+      "AvailabilityZones",
+      "VPCZoneIdentifier",
+      "HealthCheckType",
+      "HealthCheckGracePeriod",
+      "DefaultInstanceWarmup",
+      "CapacityRebalance",
+      "MixedInstancesPolicy",
+      "LaunchTemplate",
+      "Instances",
+      "TargetGroupARNs",
+      "SuspendedProcesses",
+      "AvailabilityZoneDistribution",
+      "AvailabilityZoneImpairmentPolicy"
+    ],
+    "AWS::AutoScaling::ScalingPolicy": [
+      "AutoScalingGroupName",
+      "PolicyType",
+      "TargetTrackingConfiguration",
+      "StepAdjustments",
+      "EstimatedInstanceWarmup"
+    ],
+    "AWS::ElasticLoadBalancingV2::LoadBalancer": [
+      "Type",
+      "Scheme",
+      "State.Code",
+      "AvailabilityZones",
+      "VpcId",
+      "SecurityGroups"
+    ],
+    "AWS::ElasticLoadBalancingV2::TargetGroup": [
+      "TargetType",
+      "Protocol",
+      "Port",
+      "VpcId",
+      "LoadBalancerArns",
+      "HealthCheckProtocol",
+      "HealthCheckPort",
+      "HealthCheckPath",
+      "HealthCheckIntervalSeconds",
+      "HealthCheckTimeoutSeconds",
+      "HealthyThresholdCount",
+      "UnhealthyThresholdCount"
+    ],
+    "AWS::ElasticLoadBalancingV2::Listener": [
+      "LoadBalancerArn",
+      "Protocol",
+      "Port",
+      "DefaultActions"
+    ],
+    "AWS::ElasticLoadBalancingV2::TargetHealth": [
+      "Target",
+      "TargetHealth",
+      "AvailabilityZone"
+    ],
+    "AWS::RDS::DBInstance": [
+      "Engine",
+      "DBInstanceClass",
+      "DBInstanceStatus",
+      "MultiAZ",
+      "AvailabilityZone",
+      "SecondaryAvailabilityZone",
+      "DBClusterIdentifier",
+      "DBSubnetGroup",
+      "ReadReplicaDBInstanceIdentifiers",
+      "ReadReplicaSourceDBInstanceIdentifier",
+      "BackupRetentionPeriod",
+      "PreferredBackupWindow",
+      "LatestRestorableTime",
+      "StorageEncrypted",
+      "PubliclyAccessible",
+      "VpcSecurityGroups"
+    ],
+    "AWS::RDS::DBCluster": [
+      "Engine",
+      "Status",
+      "MultiAZ",
+      "AvailabilityZones",
+      "DBClusterMembers",
+      "GlobalClusterIdentifier",
+      "ReplicationSourceIdentifier",
+      "BackupRetentionPeriod",
+      "EarliestRestorableTime",
+      "LatestRestorableTime",
+      "StorageEncrypted",
+      "DBSubnetGroup",
+      "VpcSecurityGroups",
+      "ServerlessV2ScalingConfiguration"
+    ],
+    "AWS::RDS::GlobalCluster": [
+      "Status",
+      "Engine",
+      "GlobalClusterMembers",
+      "FailoverState",
+      "StorageEncrypted"
+    ],
+    "AWS::RDS::DBSubnetGroup": [
+      "SubnetGroupStatus",
+      "VpcId",
+      "Subnets"
+    ],
+    "AWS::EC2::Subnet": [
+      "VpcId",
+      "AvailabilityZone",
+      "AvailabilityZoneId",
+      "AvailableIpAddressCount",
+      "State"
+    ],
+    "AWS::EC2::VPC": [
+      "State",
+      "CidrBlock",
+      "IsDefault"
+    ],
+    "AWS::EC2::CapacityReservation": [
+      "AvailabilityZone",
+      "AvailabilityZoneId",
+      "InstanceType",
+      "InstancePlatform",
+      "Tenancy",
+      "TotalInstanceCount",
+      "AvailableInstanceCount",
+      "State",
+      "InstanceMatchCriteria",
+      "EndDate",
+      "CapacityReservationFleetId"
+    ],
+    "AWS::EC2::LaunchTemplate": [
+      "DefaultVersionNumber",
+      "LatestVersionNumber",
+      "LaunchTemplateName"
+    ]
+  }
+}
