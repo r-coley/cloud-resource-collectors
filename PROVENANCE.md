@@ -11,3 +11,7 @@ mapping improvements, not runtime dependencies.
 Ajv and its dependencies are installed through npm using this repository's lockfile.
 Their upstream package licences remain applicable. The official cloud CLIs are
 separately installed prerequisites only for the respective live collection modes.
+
+The graph utility uses the official neo4j-driver JavaScript package (Apache-2.0)
+under its upstream licence. Neo4j is a separately deployed backend for graph import
+and queries, not a requirement for running collection. No APOC plugin is required.

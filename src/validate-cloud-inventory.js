@@ -7,7 +7,7 @@ export function validateCloudInventory(snapshot){
  const fail=()=>{throw new Error('Cloud inventory has invalid references, evidence or timestamps');};
  const unique=(rows,field)=>{const map=new Map();for(const row of rows){if(map.has(row[field]))fail();map.set(row[field],row);}return map;};
  const scopes=unique(snapshot.scopes,'id'),collections=unique(snapshot.collections,'id'),resources=unique(snapshot.resources,'key'),evidence=unique(snapshot.evidence,'id');unique(snapshot.relationships,'id');unique(snapshot.services,'id');
- const time=value=>{if(!/^\d{4}-\d{2}-\d{2}T.*Z$/.test(value)||!Number.isFinite(Date.parse(value)))fail();return Date.parse(value);};
+ const time=value=>{if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,9})?Z$/.test(value)||!Number.isFinite(Date.parse(value))||new Date(value).toISOString().slice(0,19)!==value.slice(0,19))fail();return Date.parse(value);};
  if(time(snapshot.startedAt)>time(snapshot.finishedAt))fail();
  for(const c of collections.values())if(!scopes.has(c.scopeId)||time(c.startedAt)>time(c.finishedAt))fail();
  for(const e of evidence.values()){if(!collections.has(e.collectionId))fail();time(e.observedAt);}

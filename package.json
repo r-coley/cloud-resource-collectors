@@ -1,21 +1,23 @@
 {
   "name": "cloud-resource-collectors",
-  "version": "0.1.0",
-  "description": "Read-only Azure, AWS and GCP resource discovery with a shared JSON inventory contract",
+  "version": "0.2.0",
+  "description": "Collect Azure, AWS and GCP resources into JSON and import evidence into a Neo4j graph for resilience queries",
   "type": "module",
   "private": true,
   "engines": {
     "node": ">=22"
   },
   "bin": {
-    "cloud-collect": "bin/cloud-collect.js"
+    "cloud-collect": "bin/cloud-collect.js",
+    "cloud-graph": "bin/cloud-graph.js"
   },
   "scripts": {
     "test": "node --test tests/*.test.js",
     "demo": "node scripts/demo.js"
   },
   "dependencies": {
-    "ajv": "8.17.1"
+    "ajv": "8.17.1",
+    "neo4j-driver": "6.3.0"
   },
   "files": [
     "bin/",

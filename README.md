@@ -5,8 +5,9 @@ for resilience assessment of cloud-deployed services. This is a standalone repos
 it does not require the architecture simulator or another discovery platform.
 
 The intended pipeline is **cloud resources → JSON → graph database → resilience queries**.
-Collection is implemented. The graph import utility will be added in this same repository;
-see [graph/README.md](graph/README.md). No database is needed to run the collectors.
+Collection and Neo4j graph import/query utilities are implemented. See
+[graph/README.md](graph/README.md) for database setup, imports and project resilience
+evidence queries. No database is needed to run the collectors.
 
 ## Install and test
 
@@ -184,4 +185,19 @@ configuration: filtering known sensitive fields is not a complete secrets detect
 
 The lower-level `azure-discover.js`, `aws-discover.js` and `gcp-discover.js` commands
 remain available for provider-specific review bundles. Use `bin/cloud-collect.js` as
-the project-inventory interface and the JSON handoff to the future graph importer.
+the project-inventory interface and the JSON handoff to the graph importer.
+
+## Populate and query a graph database
+
+After collecting JSON, use the independent graph utility in this repository:
+
+```sh
+node bin/cloud-graph.js import --input runs/azure-resources.json --input runs/aws-resources.json
+node bin/cloud-graph.js projects
+node bin/cloud-graph.js resilience --project YOUR_PROJECT_ID
+```
+
+Configure Neo4j first using the [graph setup and query instructions](graph/README.md).
+The importer preserves evidence and snapshot history, supports repeat imports, and
+never treats missing resources in a partial scan as deletions. Resilience queries
+show configuration evidence and gaps for review; they do not certify resilience.

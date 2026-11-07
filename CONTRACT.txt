@@ -58,7 +58,7 @@ Services
 Catalogue ID/name, catalogue status, memberships and gaps. A resource can appear
 in several service memberships but is emitted once in resources. Ownership,
 shared/untagged dependencies and other services' dependencies remain distinct.
-No visible resources does not prove that a service service is absent.
+No visible resources does not prove that a service is absent.
 
 Evidence and coverage
 Every evidence record references a collection with scope, source/API/table,
@@ -74,7 +74,7 @@ unverified. A successful Resource Graph query does not prove full API visibility
 Full raw estate evidence may include resources beyond the selected service; this
 is an estate export, not a minimal service-scoped disclosure package.
 
-Importer rules (contract requirements; importer not built in this change)
+Importer rules (implemented by the Neo4j graph utility)
 1. Validate schema version, structure and semantic integrity before a transaction:
    unique keys/IDs; valid scope, collection and evidence references; valid source
    pointers for observed facts; unknown facts null; valid UTC times and time order;
@@ -108,5 +108,10 @@ Service memberships are optional annotations and do not determine resource inclu
 Resource-to-scope links enable project queries even without a service catalogue.
 Azure --resource-group selectors narrow subscription scope; dependencies outside
 that selection remain unresolved. Provider-specific review bundle commands retain
-their earlier service-oriented views. The graph importer will share this repository
-but is not implemented yet; see graph/README.md.
+their earlier service-oriented views. The graph importer shares this repository; see graph/README.md.
+
+Graph utility
+The Neo4j importer preserves snapshot-scoped observations and supporting evidence.
+It validates all files before connecting, commits each snapshot atomically, rejects
+conflicting content under an existing snapshot ID, and never deletes historical
+resources based on absence. graph/README.md describes the model and evidence queries.
