@@ -1,19 +1,17 @@
 # Source and dependencies
 
-The initial collectors were extracted from the owner's architecture project at
-commit `6584399`. This repository is independent: the cloud-neutral JSON contract
-is its integration boundary. Version 0.3 ports the collectors and graph utility
-to Python; the earlier implementation remains available in Git history.
+This repository maintains the Python collectors, provider mappings, and graph
+queries. The [cloud-neutral JSON contract](docs/CONTRACT.md) defines the interface
+between collection and graph import.
 
-No Fix Inventory, Cartography or AWS Workload Discovery source code is copied into
-the implementation. Research notes record references, not runtime dependencies.
-Provider mappings and query definitions are maintained in this repository.
+The implementation contains no source copied from Fix Inventory, Cartography,
+or AWS Workload Discovery.
 
-The implementation uses the official Boto3, Azure Identity/Resource Graph, Google
-API client/google-auth, and Neo4j Python packages, plus jsonschema. Dependencies
-and version ranges are in pyproject.toml; requirements-dev.lock.txt records the
-tested development environment. Upstream package licences remain applicable.
+The collectors use Boto3, Azure Identity and Resource Graph, and Google's API
+client and authentication libraries. The graph utility uses the Neo4j Python
+driver. Both use JSON Schema validation. See [pyproject.toml](pyproject.toml)
+for dependency ranges and [requirements-dev.lock.txt](requirements-dev.lock.txt)
+for the recorded development environment. Upstream package licenses apply.
 
-Neo4j is a separately deployed graph backend, not a collection prerequisite.
-No APOC plugin or discovery-platform runtime is required. Cloud CLIs are optional
-ways to prepare supported SDK credentials; collectors never invoke subprocesses.
+Neo4j is required for graph import and queries. The collectors authenticate
+through the cloud SDKs, which can use credentials from an existing CLI login.

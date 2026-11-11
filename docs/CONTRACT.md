@@ -10,7 +10,7 @@ been verified.
 
 ## Files
 
-cloud-inventory.schema.json: strict JSON Schema draft-07 structural contract.
+[cloud-inventory.schema.json](../schemas/cloud-inventory.schema.json) is the strict JSON Schema draft-07 structural contract.
 examples/{azure,aws,gcp}-service.cloud-inventory.json: synthetic service examples.
 python/cloud_resource_collectors/normalise.py: provider normalization.
 The cloud-collect command writes one neutral JSON snapshot for downstream consumers.

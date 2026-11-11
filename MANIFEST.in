@@ -1,4 +1,4 @@
-include cloud-inventory.schema.json requirements-dev.lock.txt
+include schemas/cloud-inventory.schema.json requirements-dev.lock.txt
 include docs/*.md PROVENANCE.md
 recursive-include examples *.json
 recursive-include graph *.yaml *.cypher

@@ -180,7 +180,7 @@ def test_packaged_contract_and_cypher_match_repository():
     from cloud_resource_collectors.graph import QUERIES
 
     assert data_file("cloud-inventory.schema.json") == read_json(
-        ROOT / "cloud-inventory.schema.json"
+        ROOT / "schemas" / "cloud-inventory.schema.json"
     )
     for name, query in QUERIES.items():
         assert query == (ROOT / "graph/queries" / f"{name}.cypher").read_text()

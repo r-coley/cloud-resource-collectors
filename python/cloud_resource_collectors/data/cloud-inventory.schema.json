@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/r-coley/cloud-resource-collectors/main/cloud-inventory.schema.json",
+  "$id": "https://raw.githubusercontent.com/r-coley/cloud-resource-collectors/main/schemas/cloud-inventory.schema.json",
   "title": "Cloud inventory snapshot",
   "type": "object",
   "additionalProperties": false,
