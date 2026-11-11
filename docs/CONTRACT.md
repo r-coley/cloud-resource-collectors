@@ -1,20 +1,23 @@
-Cloud-neutral discovery contract — version 1.0.0
+# Cloud-neutral discovery contract — version 1.0.0
 
-Purpose
+## Purpose
+
 An immutable observation of cloud configuration, consumable without installing
 Fix Inventory, Cartography or a graph database. This is an inventory interchange
 contract, not the architecture/simulation design schema. Initial Azure, AWS and
 GCP connectors produce this format. Their live cloud integration has not yet
 been verified.
 
-Files
+## Files
+
 cloud-inventory.schema.json: strict JSON Schema draft-07 structural contract.
 examples/{azure,aws,gcp}-service.cloud-inventory.json: synthetic service examples.
 python/cloud_resource_collectors/normalise.py: provider normalization.
 The cloud-collect command writes one neutral JSON snapshot for downstream consumers.
 The Python package bundles the same schema; tests keep the two copies identical.
 
-Envelope
+## Envelope
+
 schemaVersion: cloud-inventory/1.0.0. Consumers reject unsupported major versions.
 snapshotId: content digest for this serialized export, not a cross-run resource ID.
 origin: live, synthetic or provided (provided does not certify live provenance).
@@ -25,7 +28,8 @@ GCP immutable project number as an additional provider fact when available.
 Collection scopes and service memberships are separate: shared infrastructure
 may be outside a service's direct tag selection.
 
-Resource identity
+## Resource identity
+
 key is an opaque provider + scope + native-ID identity. Importers must not parse
 it to derive topology. Azure keys canonicalize case and trailing slash; nativeId
 preserves the observed provider spelling. AWS/GCP connectors must define their
@@ -45,7 +49,8 @@ provider configuration rather than flattening away failover semantics.
 Do not put invented cross-cloud equivalents into observed facts. Future derived
 assessments should be separate records with rule version and supporting evidence.
 
-Relationships
+## Relationships
+
 from references a resource key. target retains nativeId even when unresolved.
 resourceKey is null for an unresolved target; resolution distinguishes an exact
 resource from the nearest inventoried ancestor (e.g. an inline backend pool).
@@ -54,13 +59,15 @@ explicit configuration facts, not claims about application traffic, reachability
 health or dependency criticality. Inferred relationships need a future explicit
 schema extension; they must not be disguised as declared observations.
 
-Services
+## Services
+
 Catalogue ID/name, catalogue status, memberships and gaps. A resource can appear
 in several service memberships but is emitted once in resources. Ownership,
 shared/untagged dependencies and other services' dependencies remain distinct.
 No visible resources does not prove that a service is absent.
 
-Evidence and coverage
+## Evidence and coverage
+
 Every evidence record references a collection with scope, source/API/table,
 status, pagination completeness, permission coverage and collection times.
 Each observation has observedAt and the filtered source record. Evidence IDs,
@@ -74,7 +81,8 @@ unverified. A successful Resource Graph query does not prove full API visibility
 Full raw estate evidence may include resources beyond the selected service; this
 is an estate export, not a minimal service-scoped disclosure package.
 
-Importer rules (implemented by the Neo4j graph utility)
+## Importer rules (implemented by the Neo4j graph utility)
+
 1. Validate schema version, structure and semantic integrity before a transaction:
    unique keys/IDs; valid scope, collection and evidence references; valid source
    pointers for observed facts; unknown facts null; valid UTC times and time order;
@@ -91,7 +99,8 @@ Importer rules (implemented by the Neo4j graph utility)
 6. simulationReady is always false for discovery output. Workload paths, measured
    transaction capacity and recovery assumptions require assessment/confirmation.
 
-Versioning
+## Versioning
+
 Major: incompatible identity/meaning/structure change. Minor: coordinated optional
 extensions; strict consumers must be updated before accepting new fields. Patch:
 clarifications without changing valid data. Do not silently reinterpret older files.
@@ -101,17 +110,19 @@ fixture. AWS and GCP commands additionally run shared schema/evidence/reference
 validation before writing exports. All three fixtures exercise that validator.
 Live integration verification remains to be done.
 
-Standalone project interface
+## Standalone project interface
+
 The unified cloud-collect interface exports every observed resource in the
 requested scopes, including untagged resources and observed scope containers.
 Service memberships are optional annotations and do not determine resource inclusion.
 Resource-to-scope links enable project queries even without a service catalogue.
 Azure --resource-group selectors narrow subscription scope; dependencies outside
 that selection remain unresolved. Provider-specific review bundle commands retain
-their earlier service-oriented views. The graph importer shares this repository; see graph/README.md.
+their earlier service-oriented views. The graph importer shares this repository; see docs/graph-README.md.
 
-Graph utility
+## Graph utility
+
 The Neo4j importer preserves snapshot-scoped observations and supporting evidence.
 It validates all files before connecting, commits each snapshot atomically, rejects
 conflicting content under an existing snapshot ID, and never deletes historical
-resources based on absence. graph/README.md describes the model and evidence queries.
+resources based on absence. docs/graph-README.md describes the model and evidence queries.

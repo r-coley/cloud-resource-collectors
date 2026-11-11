@@ -11,11 +11,9 @@ Requires Python 3.11+, the repository package, and either Docker Compose v2 or
 an existing Neo4j 5.26+ installation. The included Compose file starts Neo4j Community
 with its default `neo4j` database and a persistent data volume, listening on localhost.
 
-From the repository root:
+Install the package using the [collector guide](collector-README.md), then run these commands from the repository root with the virtual environment active and Docker running:
 
 ```sh
-python -m pip install .
-cloud-demo
 export NEO4J_PASSWORD='choose-your-local-password'
 docker compose -f graph/compose.yaml up -d --wait
 ```
@@ -40,7 +38,10 @@ Compose creates the local default database; `init` creates the graph constraints
 
 ## Import collected JSON
 
+This example uses synthetic inventories. To import a live collection, use the output paths from the collector instead.
+
 ```sh
+cloud-demo
 cloud-graph init
 cloud-graph import \
   --input runs/demo/azure/cloud-inventory.json \
@@ -61,6 +62,30 @@ The import command ensures constraints and indexes exist, so its identity needs 
 corresponding Neo4j schema and write permissions. Query commands only read data.
 No APOC plugins or enterprise features are required. Using a dedicated inventory
 database avoids mixing this model with unrelated application graphs.
+
+## Open the graph viewer
+
+Open [Neo4j Browser](http://127.0.0.1:7474) and connect to
+`bolt://127.0.0.1:7687` as `neo4j` with the password you set before startup.
+For the local Compose setup, select the `neo4j` database. Use the
+`projectObservationId` from `cloud-graph projects` to choose the imported
+project snapshot. Set it in the Browser command bar:
+
+```text
+:param projectObservationId => 'YOUR_PROJECT_OBSERVATION_ID'
+```
+
+The reusable [Cypher queries](../graph/queries/) can also be run in the viewer.
+
+Example graph visualization after setting that parameter in Neo4j Browser:
+
+```cypher
+MATCH (r:ResourceObservation)-[:IN_PROJECT]->(p:ProjectObservation {id:$projectObservationId})
+OPTIONAL MATCH (r)-[e:CONFIGURATION_REFERENCE|CONTAINED_BY]->(target:ResourceObservation)
+RETURN r, e, target LIMIT 200
+```
+
+These are configured relationships, not verified application traffic paths.
 
 ## Query projects
 
@@ -124,20 +149,6 @@ cloud-graph evidence \
 This returns the filtered source record, collection source/status and observation time.
 Output is JSON; redirect a query to a file if needed. Raw collected configuration may
 be confidential despite filtering, so use the database's normal access controls.
-
-Neo4j Browser is available at `http://127.0.0.1:7474` with the local Compose setup.
-The reusable Cypher files in [queries/](queries/) can also be run there. Project-scoped
-query files accept `$projectObservationId`, which comes from the project listing.
-
-Example graph visualization after setting that parameter in Neo4j Browser:
-
-```cypher
-MATCH (r:ResourceObservation)-[:IN_PROJECT]->(p:ProjectObservation {id:$projectObservationId})
-OPTIONAL MATCH (r)-[e:CONFIGURATION_REFERENCE|CONTAINED_BY]->(target:ResourceObservation)
-RETURN r, e, target LIMIT 200
-```
-
-These are configured relationships, not verified application traffic paths.
 
 ## Graph model and history
 
